@@ -125,7 +125,7 @@ const PROJECTS = [
     dataSources: "BCHnostr relay (wss://relay.bchnostr.com), Haskoin (for donor data in an earlier iteration)",
     whatsNext: null,
     liveUrl: "https://www.bchnostr.live/",
-    githubUrl: "https://github.com/alberdioni8406/BCHnostr",
+    githubUrl: "https://github.com/alberdioni8406/BCHnostrpulse",
     supportNeeded: null
   },
 
@@ -189,7 +189,7 @@ const PROJECTS = [
     dataSources: "Haskoin Store API",
     whatsNext: "Needs continued maintenance as the Haskoin Store API evolves, and community feedback on which additional views would be useful.",
     liveUrl: "https://compass-mem.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/compass-mem",
     supportNeeded: ["users", "feedback"]
   },
   {
@@ -209,7 +209,7 @@ const PROJECTS = [
     dataSources: "Haskoin (block/transaction data), CoinPaprika (pricing)",
     whatsNext: "Needs a populated, verified known-address list and continued monitoring-accuracy work.",
     liveUrl: "https://compass-whale.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/compass-whale",
     supportNeeded: ["users", "funding"]
   },
   {
@@ -254,7 +254,7 @@ const PROJECTS = [
     dataSources: "TokenStork API, Paytaca BCMR",
     whatsNext: "Continued hardening of the CORS-proxy layer and expansion of token coverage.",
     liveUrl: "https://cash-tokens-ledger.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/cash-tokens-ledger",
     supportNeeded: ["feedback", "users"]
   },
   {
