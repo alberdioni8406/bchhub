@@ -276,7 +276,7 @@ const PROJECTS = [
     dataSources: "Chaingraph, mainnet.cash, Haskoin, CoinPaprika (via serverless proxy)",
     whatsNext: "API routes need configuration fixes (a prior Vercel root-directory/package.json issue affected live data), and the curated example atlas is intentionally illustrative rather than exhaustive.",
     liveUrl: "https://cash-tokens.vercel.app/#/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/CashCompass-Tokens",
     supportNeeded: ["funding", "feedback"]
   }
 ];
