@@ -38,7 +38,7 @@ const PROJECTS = [
     dataSources: "Curated/maintained directly, not API-driven",
     whatsNext: "The project's original custom domain (cashcompass.space) is currently unavailable due to a domain-provider issue outside the project's control. The Vercel deployment remains the live, maintained version, and the domain may be restored if the provider situation resolves.",
     liveUrl: "https://cashcompass-bch.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406/cashcompass-bch",
+    githubUrl: "https://github.com/alberdioni8406/cashcompass",
     domainNote: "Originally at cashcompass.space — that custom domain is temporarily unavailable due to a domain-provider issue. The site itself is unaffected and lives at the Vercel URL below.",
     supportNeeded: null
   },
@@ -189,7 +189,7 @@ const PROJECTS = [
     dataSources: "Haskoin Store API",
     whatsNext: "Needs continued maintenance as the Haskoin Store API evolves, and community feedback on which additional views would be useful.",
     liveUrl: "https://compass-mem.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406/compass-mem",
+    githubUrl: "https://github.com/alberdioni8406/compassmem",
     supportNeeded: ["users", "feedback"]
   },
   {
