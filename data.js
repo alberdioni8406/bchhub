@@ -38,7 +38,7 @@ const PROJECTS = [
     dataSources: "Curated/maintained directly, not API-driven",
     whatsNext: "The project's original custom domain (cashcompass.space) is currently unavailable due to a domain-provider issue outside the project's control. The Vercel deployment remains the live, maintained version, and the domain may be restored if the provider situation resolves.",
     liveUrl: "https://cashcompass-bch.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/cashcompass-bch",
     domainNote: "Originally at cashcompass.space — that custom domain is temporarily unavailable due to a domain-provider issue. The site itself is unaffected and lives at the Vercel URL below.",
     supportNeeded: null
   },
@@ -59,7 +59,7 @@ const PROJECTS = [
     dataSources: "General Protocols oracle, CoinPaprika fallback",
     whatsNext: "The MUSD card currently shows an offline warning due to a known bug in the Moria contract, upstream of this project.",
     liveUrl: "https://www.stableshift.cash/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/StableShift",
     supportNeeded: null
   },
   {
@@ -80,7 +80,7 @@ const PROJECTS = [
     dataSources: "Kraken (primary), Coinbase (fallback), CoinPaprika (via proxy), open.er-api.com (FX)",
     whatsNext: null,
     liveUrl: "https://www.compasspay.cash/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/compass-pay",
     supportNeeded: null
   },
   {
@@ -103,7 +103,7 @@ const PROJECTS = [
     dataSources: "Riften Labs Cauldron indexer (indexer.riften.net/cauldron)",
     whatsNext: "Planned: multi-period volume (7d/30d/monthly), an APY leaderboard, a new-pools/token-launch tracker, whale LP and liquidity-concentration indicators, historical TVL charting, and unusual-volume detection.",
     liveUrl: "https://www.cauldronradar.cash/#/dashboard",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/cauldron-radar",
     supportNeeded: null
   },
   {
@@ -125,7 +125,7 @@ const PROJECTS = [
     dataSources: "BCHnostr relay (wss://relay.bchnostr.com), Haskoin (for donor data in an earlier iteration)",
     whatsNext: null,
     liveUrl: "https://www.bchnostr.live/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/BCHnostr",
     supportNeeded: null
   },
 
@@ -148,7 +148,7 @@ const PROJECTS = [
     dataSources: "Curated/maintained directly",
     whatsNext: "Needs a real (non-localStorage) voting backend, and continued curation as new tools launch.",
     liveUrl: "https://bch-lab.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/bch-lab",
     supportNeeded: ["feedback", "users"]
   },
   {
