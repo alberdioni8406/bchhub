@@ -169,7 +169,7 @@ const PROJECTS = [
     dataSources: "Live probes against each tracked service, with fallback simulated monitoring",
     whatsNext: "Needs broader service coverage and replacing remaining simulated-monitoring fallbacks with live probes where feasible.",
     liveUrl: "https://bch-ecosystem-radar.vercel.app/",
-    githubUrl: "https://github.com/alberdioni8406",
+    githubUrl: "https://github.com/alberdioni8406/BCH-ecosystem-radar",
     supportNeeded: ["funding", "feedback"]
   },
   {
