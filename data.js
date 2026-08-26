@@ -23,9 +23,10 @@ const FEATURED_SLUG = "cauldron-radar";
 
 /** Static “what support funded” notes — update manually when something ships. */
 const SUPPORT_FUNDED = [
-  { period: "Aug 2026", note: "bchtools.cash custom domain + site rebuild as a community tools showcase." },
-  { period: "2026", note: "Cauldron Radar live analytics kept online and improved with community feedback." },
-  { period: "2026", note: "CashCompass, Compass Pay, StableShift, BCHnostr.live — finished tools maintained for public use." }
+  { period: "Aug 2026", note: "Community support helped purchase the custom domains bchtools.cash and cauldronradar.cash — keeping the tools hub and Cauldron Radar on proper domains for the ecosystem." },
+  { period: "Aug 2026", note: "bchtools.cash launched as the community showcase for finished and unfinished BCH tools (CashCompass family)." },
+  { period: "2026", note: "Cauldron Radar (cauldronradar.cash) — live DeFi analytics for the Cauldron AMM, maintained and improved with community feedback. Featured tool of the month." },
+  { period: "2026", note: "CashCompass, Compass Pay, StableShift, BCHnostr.live — finished tools kept public and free to use." }
 ];
 
 
