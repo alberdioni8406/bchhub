@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>alberdioni8406 — BCH Builder Compendium</title>
-<meta name="description" content="A living compendium of tools, dashboards, explorers and infrastructure built for the Bitcoin Cash ecosystem by alberdioni8406.">
-<meta property="og:title" content="alberdioni8406 — BCH Builder Compendium">
-<meta property="og:description" content="Tools, dashboards and infrastructure built for Bitcoin Cash — finished, in progress, and waiting on the community to decide what's next.">
+<title>BCHtools.cash — Tools for the Bitcoin Cash community</title>
+<meta name="description" content="BCHtools: finished and unfinished tools for the Bitcoin Cash ecosystem and BCH DeFi. Part of CashCompass. Built and maintained for the community — supported by donations.">
+<meta property="og:title" content="BCHtools.cash — Tools for the Bitcoin Cash community">
+<meta property="og:description" content="A visual space to showcase BCH tools: Wider Ecosystem and BCH DeFi. Finished, beta, and unfinished tools live through community funding.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
@@ -15,15 +15,15 @@
 
 <header class="site-nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="dot"></span> alberdioni8406</a>
+    <a href="#top" class="brand"><span class="dot"></span> BCHtools</a>
     <nav>
       <ul class="nav-links" id="navLinks">
         <li><a href="#top">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#ecosystem">BCH Ecosystem</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#ecosystem">Wider Ecosystem</a></li>
         <li><a href="#defi">BCH DeFi</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#funding">Funding</a></li>
+        <li><a href="#maintainer">Maintainer</a></li>
       </ul>
     </nav>
     <div style="display:flex; align-items:center; gap:12px;">
@@ -39,57 +39,49 @@
   <section class="hero">
     <div class="hero-grid"></div>
     <div class="wrap">
-      <p class="eyebrow">BCH Builder Compendium</p>
-      <h1>Building tools for the <span class="accent">Bitcoin Cash</span> ecosystem.</h1>
-      <p class="lede">A living collection of the applications, dashboards, explorers, experiments and infrastructure tools built for Bitcoin Cash — by <span class="mono">alberdioni8406</span>.</p>
+      <p class="eyebrow">BCHtools.cash · CashCompass</p>
+      <h1>Tools for the <span class="accent">Bitcoin Cash</span> community</h1>
+      <p class="lede">A visual space to showcase BCH tools — finished products and unfinished work — for the wider ecosystem and BCH DeFi. Part of CashCompass. All tools live through community funding: domains, hosting, and maintenance depend on donations.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">Explore the tools →</a>
-        <a href="#support" class="btn btn-ghost">Support the work</a>
+        <a href="#tools" class="btn btn-primary">Explore the tools →</a>
+        <a href="#support" class="btn btn-ghost">Support with BCH</a>
       </div>
       <div class="stat-strip" id="statStrip">
-        <div class="stat-cell"><div class="num">10+ yrs</div><div class="label">in crypto</div></div>
-        <div class="stat-cell"><div class="num">2018</div><div class="label">BCH-focused since</div></div>
-        <div class="stat-cell"><div class="num" id="statProjectCount">—</div><div class="label">projects in this compendium</div></div>
-        <div class="stat-cell"><div class="num">100s</div><div class="label">published articles</div></div>
+        <div class="stat-cell"><div class="num" id="statProjectCount">—</div><div class="label">tools showcased</div></div>
+        <div class="stat-cell"><div class="num" id="statFinished">—</div><div class="label">finished</div></div>
+        <div class="stat-cell"><div class="num" id="statInProgress">—</div><div class="label">beta / unfinished</div></div>
+        <div class="stat-cell"><div class="num">Community</div><div class="label">funded &amp; maintained</div></div>
       </div>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section class="intro">
+  <!-- FUNDING NOTICE -->
+  <section class="funding-banner" id="funding">
     <div class="wrap">
-      <div class="intro-grid">
+      <div class="funding-panel">
         <div>
-          <p class="eyebrow">The builder</p>
-          <h2>alberdioni8406</h2>
-          <p>BCH Builder, Content Creator &amp; Ecosystem Contributor. Involved in cryptocurrency for more than 10 years, and actively focused on Bitcoin Cash since 2018.</p>
-          <p>Over the years, hundreds of crypto articles and pieces of content have been published — the vast majority focused on Bitcoin Cash: its technology, adoption, applications, CashTokens, payments, and the wider ecosystem. That work has appeared across Hive, Publish0x, read.cash, Free2Z, Bastyon, Minds, and other crypto-native publishing and social platforms, consistently since 2018.</p>
-          <div class="platform-tags">
-            <span class="platform-tag">Hive</span>
-            <span class="platform-tag">Publish0x</span>
-            <span class="platform-tag">read.cash</span>
-            <span class="platform-tag">Free2Z</span>
-            <span class="platform-tag">Bastyon</span>
-            <span class="platform-tag">Minds</span>
+          <p class="eyebrow">Community funding</p>
+          <h2>These tools live because the community supports them</h2>
+          <p class="lede">Custom domains, hosting, API services, maintenance, and ongoing development are not free. Finished and unfinished tools alike depend on donations. Use the tools, report bugs, share them, or fund what you find valuable — that is how BCHtools stays online for the ecosystem.</p>
+          <div class="maintenance-list">
+            <span>Hosting</span><span>Custom domains</span><span>API services</span><span>Development</span>
+            <span>Maintenance</span><span>Dependency updates</span><span>Data monitoring</span><span>Testing</span>
           </div>
         </div>
-        <div>
-          <p class="thesis">"I don't just talk about Bitcoin Cash. I build things around it."</p>
-          <p>Writing taught the value of investigating the ecosystem closely. Building tools turns that research into something people can actually use — dashboards, explorers, payment tools and DeFi analytics that anyone can inspect, use, and criticize.</p>
-        </div>
+        <a href="#support" class="btn btn-primary">Donate BCH →</a>
       </div>
     </div>
   </section>
 
-  <!-- CONCEPT -->
+  <!-- TWO CATEGORIES -->
   <section id="concept" style="border-top:1px solid var(--line);">
     <div class="wrap">
-      <p class="eyebrow">How this is organized</p>
-      <h2>Two areas of focus</h2>
-      <p class="lede">Everything in this compendium falls into one of two broad areas — though a single project can touch both.</p>
+      <p class="eyebrow">How tools are organized</p>
+      <h2>Two focus areas</h2>
+      <p class="lede">Every tool is classified for the wider ecosystem or for BCH DeFi — some touch both.</p>
       <div class="concept-grid">
         <div class="concept-card">
-          <h3>BCH Main Ecosystem</h3>
+          <h3>Wider Ecosystem</h3>
           <p>Network, payments, addresses, community activity, ecosystem discovery, CashTokens and infrastructure.</p>
           <div class="count" id="countMain">—</div>
         </div>
@@ -102,12 +94,12 @@
     </div>
   </section>
 
-  <!-- PROJECTS / FILTERS -->
-  <section id="projects" style="border-top:1px solid var(--line);">
+  <!-- TOOLS / FILTERS -->
+  <section id="tools" style="border-top:1px solid var(--line);">
     <div class="wrap">
-      <p class="eyebrow">The compendium</p>
-      <h2>All projects</h2>
-      <p class="lede">Filter by status, category or topic — or search directly.</p>
+      <p class="eyebrow">The toolkit</p>
+      <h2>All tools</h2>
+      <p class="lede">Finished, beta, and unfinished — filter by status, category, or search.</p>
 
       <div class="filter-bar">
         <div class="filter-group" id="filterStatus" data-filter="status">
@@ -120,10 +112,10 @@
         <div class="filter-divider"></div>
         <div class="filter-group" id="filterCategory" data-filter="category">
           <button class="chip active" data-value="all">All categories</button>
-          <button class="chip" data-value="main">Main Ecosystem</button>
-          <button class="chip" data-value="defi">DeFi</button>
+          <button class="chip" data-value="main">Wider Ecosystem</button>
+          <button class="chip" data-value="defi">BCH DeFi</button>
         </div>
-        <input type="search" class="search-input" id="searchInput" placeholder="Search projects…">
+        <input type="search" class="search-input" id="searchInput" placeholder="Search tools…">
       </div>
 
       <div class="result-count" id="resultCount"></div>
@@ -134,26 +126,10 @@
   <!-- NEEDS SUPPORT -->
   <section class="support-section" id="needs-support">
     <div class="wrap">
-      <p class="eyebrow">Projects still looking for a reason to keep growing</p>
-      <p class="support-philosophy">These projects are not necessarily abandoned. They are projects waiting to prove that the community wants them enough to justify continued development.</p>
-      <p style="max-width:640px;">Building software is only part of the work. Keeping it alive requires hosting, domains, API services, development time, maintenance, fixing broken APIs, updating dependencies, monitoring data sources, testing, and new features:</p>
-      <div class="maintenance-list">
-        <span>Hosting</span><span>Domains</span><span>API services</span><span>Development time</span>
-        <span>Maintenance</span><span>Fixing broken APIs</span><span>Dependency updates</span>
-        <span>Data monitoring</span><span>Community feedback</span><span>Testing</span>
-      </div>
-      <p style="max-width:640px; margin-top:8px;">If you use one of the tools below — test it, give feedback, share it, suggest improvements, or help fund its maintenance.</p>
+      <p class="eyebrow">Unfinished &amp; beta tools</p>
+      <p class="support-philosophy">These are not abandoned. They wait for the community to show they are worth continuing — through use, feedback, or funding.</p>
+      <p style="max-width:640px;">Building is only part of the work. Keeping tools alive requires hosting, domains, APIs, development time, fixing broken sources, and new features. If you use one of the tools below — test it, give feedback, share it, or help fund its maintenance.</p>
       <div class="project-grid" id="needsSupportGrid" style="margin-top:28px;"></div>
-    </div>
-  </section>
-
-  <!-- TIMELINE -->
-  <section id="timeline">
-    <div class="wrap">
-      <p class="eyebrow">Evolution</p>
-      <h2>Builder Timeline</h2>
-      <p class="lede">From content, to experiments, to dashboards, explorers, ecosystem tools, DeFi analytics and network infrastructure.</p>
-      <div class="timeline" id="timelineList"></div>
     </div>
   </section>
 
@@ -163,10 +139,10 @@
       <p class="eyebrow">Build in public</p>
       <div class="opensource-panel">
         <div>
-          <h3>My work is open-source.</h3>
-          <p>Most of these projects are publicly inspectable. Let people inspect it. Let people criticize it. Let people suggest improvements.</p>
+          <h3>Open source by default</h3>
+          <p>Most of these tools are publicly inspectable. Inspect the code, criticize it, suggest improvements. That is how the toolkit stays honest and useful for the BCH community.</p>
         </div>
-        <a href="https://github.com/alberdioni8406" target="_blank" rel="noopener" class="btn btn-primary">View GitHub profile →</a>
+        <a href="https://github.com/alberdioni8406" target="_blank" rel="noopener" class="btn btn-primary">GitHub profile →</a>
       </div>
     </div>
   </section>
@@ -176,23 +152,23 @@
     <div class="wrap">
       <p class="eyebrow">The honest part</p>
       <h2>What deserves to live?</h2>
-      <p class="lede">More tools have been built here than can realistically be maintained forever. Some are finished. Some are experiments. Some are useful but need more development. Some need users to say whether they're actually valuable. The community has a role in deciding what survives.</p>
+      <p class="lede">More tools have been built than can be maintained forever. Some are finished. Some are experiments. Some need users or funding to stay online. The community has a role in deciding what survives.</p>
       <div class="decide-grid">
-        <div class="decide-card"><div class="icon">▲</div><h4>Keep building</h4><p>It's working and worth pushing further.</p></div>
-        <div class="decide-card"><div class="icon">?</div><h4>Needs feedback</h4><p>Try it and say what's missing.</p></div>
-        <div class="decide-card"><div class="icon">$</div><h4>Needs funding</h4><p>Hosting and APIs aren't free.</p></div>
-        <div class="decide-card"><div class="icon">◎</div><h4>Needs users</h4><p>Prove it's actually being used.</p></div>
+        <div class="decide-card"><div class="icon">▲</div><h4>Keep building</h4><p>It is working and worth pushing further.</p></div>
+        <div class="decide-card"><div class="icon">?</div><h4>Needs feedback</h4><p>Try it and say what is missing.</p></div>
+        <div class="decide-card"><div class="icon">$</div><h4>Needs funding</h4><p>Hosting and APIs are not free.</p></div>
+        <div class="decide-card"><div class="icon">◎</div><h4>Needs users</h4><p>Prove it is actually being used.</p></div>
       </div>
-      <p style="margin-top:22px;">This isn't a real voting backend yet — it's an honest CTA. If a project resonates, <a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener" style="color:var(--green-bright);">reach out</a> and say so.</p>
+      <p style="margin-top:22px;">Reach out if a tool resonates: <a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener" style="color:var(--green-bright);">X</a> · <a href="https://t.me/alberdioni8406" target="_blank" rel="noopener" style="color:var(--green-bright);">Telegram</a> · <a href="mailto:alberdioni8406@proton.me" style="color:var(--green-bright);">email</a>.</p>
     </div>
   </section>
 
   <!-- SUPPORT / DONATE -->
   <section id="support" style="border-top:1px solid var(--line);">
     <div class="wrap">
-      <p class="eyebrow">Help decide what gets built next</p>
+      <p class="eyebrow">Help keep the tools online</p>
       <h2>Support with Bitcoin Cash</h2>
-      <p class="lede">Maintaining independent BCH tools costs time and money — hosting, domains, APIs, maintenance, development and updates all require resources. Community usage and support help determine which projects deserve another round of development.</p>
+      <p class="lede">Maintaining independent BCH tools costs time and money — hosting, custom domains, APIs, maintenance, and development. Community usage and support help determine which projects get another round of work.</p>
 
       <div class="donate-panel" style="margin-top:28px;">
         <div>
@@ -202,7 +178,7 @@
             <span class="ask-item">Report bugs</span>
             <span class="ask-item">Give feedback</span>
             <span class="ask-item">Suggest features</span>
-            <span class="ask-item">Share useful projects</span>
+            <span class="ask-item">Share useful tools</span>
             <span class="ask-item">Contribute code</span>
             <span class="ask-item">Support financially</span>
           </div>
@@ -216,22 +192,29 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" style="border-top:1px solid var(--line);">
+  <!-- MAINTAINER -->
+  <section id="maintainer" style="border-top:1px solid var(--line);">
     <div class="wrap">
-      <p class="eyebrow">About the builder</p>
+      <p class="eyebrow">Maintainer</p>
       <div class="about-panel">
         <div>
-          <h2>I've spent years writing about Bitcoin Cash. Now I'm building things around it.</h2>
-          <p>Content creation and building software are connected: writing taught the discipline of investigating the ecosystem closely; building tools turns that research into something people can actually use. Every project in this compendium is the result of experimentation, curiosity, research, and a desire to make BCH information easier to access.</p>
+          <h2>alberdioni8406</h2>
+          <p>BCHtools is maintained for the Bitcoin Cash community as part of the CashCompass effort. The focus is on practical tools for the wider ecosystem and BCH DeFi — not a personal portfolio, but a shared visual space for finished and unfinished work that depends on community support to stay alive.</p>
+          <p style="margin-top:16px;">Links:</p>
+          <ul class="about-facts" style="margin-top:8px;">
+            <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X · @alberdioni8406_</a></li>
+            <li><a href="https://t.me/alberdioni8406" target="_blank" rel="noopener">Telegram · @alberdioni8406</a></li>
+            <li><a href="mailto:alberdioni8406@proton.me">Email · alberdioni8406@proton.me</a></li>
+            <li><a href="https://github.com/alberdioni8406" target="_blank" rel="noopener">GitHub · github.com/alberdioni8406</a></li>
+          </ul>
         </div>
         <ul class="about-facts">
           <li>10+ years in cryptocurrency</li>
           <li>Active BCH focus since 2018</li>
-          <li>Hundreds of published crypto articles and pieces of content</li>
-          <li>Extensive BCH-focused writing across Hive, Publish0x, read.cash, Free2Z, Bastyon, Minds and other crypto-native platforms</li>
+          <li>Hundreds of published BCH-focused articles</li>
           <li>Open-source, public building</li>
-          <li>Active in BCH grassroots adoption work in Mozambique</li>
+          <li>Grassroots BCH adoption work (Mozambique)</li>
+          <li>CashCompass · BCHtools</li>
         </ul>
       </div>
     </div>
@@ -250,17 +233,20 @@
 <footer>
   <div class="wrap footer-inner">
     <div>
-      <div class="brand" style="margin-bottom:6px;"><span class="dot"></span> alberdioni8406</div>
-      <p class="footer-note">Building tools for Bitcoin Cash.</p>
+      <div class="brand" style="margin-bottom:6px;"><span class="dot"></span> BCHtools</div>
+      <p class="footer-note">Part of CashCompass · Tools for the Bitcoin Cash community. Maintained by alberdioni8406. Supported by donations.</p>
     </div>
     <ul class="footer-links">
       <li><a href="https://github.com/alberdioni8406" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X</a></li>
       <li><a href="https://t.me/alberdioni8406" target="_blank" rel="noopener">Telegram</a></li>
+      <li><a href="mailto:alberdioni8406@proton.me">Email</a></li>
       <li><a href="#support">Support with BCH</a></li>
     </ul>
   </div>
-  <div class="wrap"><p class="footer-note" style="margin-top:18px;">© <span id="year"></span> alberdioni8406 — Building tools for Bitcoin Cash.</p></div>
+  <div class="wrap" style="padding-bottom:24px;">
+    <p class="footer-note" style="font-size:12px;">© <span id="year"></span> BCHtools · Community-funded BCH tools</p>
+  </div>
 </footer>
 
 <script src="data.js"></script>

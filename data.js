@@ -1,22 +1,24 @@
 /* ============================================================
-   BCH BUILDER COMPENDIUM — DATA
-   Single source of truth for every project card, filter, and
-   detail panel on the site. Add a new project by adding one
-   object to PROJECTS. Nothing else needs to change.
+   BCHTOOLS.CASH — DATA
+   Showcase of BCH tools built for the community as part of
+   CashCompass. Finished and unfinished tools live side by side.
+   Categories: Main Ecosystem | BCH DeFi
    ============================================================ */
 
 const BUILDER = {
   handle: "alberdioni8406",
-  tagline: "BCH Builder, Content Creator & Ecosystem Contributor",
+  name: "alberdioni8406",
+  tagline: "Maintainer · BCH tools for the community",
   github: "https://github.com/alberdioni8406",
   x: "https://x.com/alberdioni8406_",
   telegram: "https://t.me/alberdioni8406",
+  email: "alberdioni8406@proton.me",
   donationAddress: "bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040",
   tokenAwareDonationAddress: "bitcoincash:zz7pjvq99kylyvns6fjmyawjhxwnucgn2qwyae2ye9"
 };
 
-// Status enum: "finished" | "beta" | "unfinished" | "archived"
-// Category enum: "main" | "defi"
+// Status: "finished" | "beta" | "unfinished" | "archived"
+// Category: "main" | "defi"
 
 const PROJECTS = [
   {
@@ -289,7 +291,7 @@ const STATUS_LABELS = {
 };
 
 const CATEGORY_LABELS = {
-  main: "BCH Main Ecosystem",
+  main: "Wider Ecosystem",
   defi: "BCH DeFi"
 };
 
@@ -299,8 +301,6 @@ const SUPPORT_LABELS = {
   users: "Needs users"
 };
 
-// Builder timeline — only entries with dates the builder has actually
-// confirmed. No invented or estimated dates.
 const TIMELINE = [
   { period: "2018", label: "BCH focus begins", note: "Active focus on Bitcoin Cash begins, after already being in crypto since the mid-2010s." },
   { period: "2018–present", label: "Writing across the ecosystem", note: "Hundreds of BCH-focused articles published across Hive, Publish0x, read.cash, Free2Z, Bastyon, Minds and other crypto-native platforms." },

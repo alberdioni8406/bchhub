@@ -1,27 +1,33 @@
-# BCH Builder Compendium
+# BCHtools.cash
 
-A living compendium of everything built for the Bitcoin Cash ecosystem by [alberdioni8406](https://github.com/alberdioni8406).
+A visual space to showcase **BCH tools** for the Bitcoin Cash community — part of **CashCompass**.
 
-Live: _(deploy and add URL here)_
+Finished products and unfinished work are both listed, classified as:
 
-## What it is
+- **Wider Ecosystem** — network, payments, CashTokens, explorers, community, infrastructure  
+- **BCH DeFi** — liquidity, trading, stablecoins, token markets  
 
-Not a portfolio — a BCH Builder Hub. Every project gets a status (Finished, Beta / Active Development, Unfinished / Needs Support, Archived), a category (BCH Main Ecosystem or BCH DeFi), and a set of tags. Visitors can filter, search, read a full detail panel per project, visit the live app, inspect the source, and support the work.
+## Community funding
+
+All tools (finished or not) depend on community support. Custom domains, hosting, APIs, maintenance, and development are not free. Donations help decide what stays online and what gets the next round of work.
+
+**Donation address:**  
+`bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`
 
 ## Architecture
 
-Plain HTML/CSS/vanilla JS. No framework, no build step — matches every other project in this ecosystem.
+Plain HTML / CSS / vanilla JS. No framework, no build step.
 
 ```
 index.html   — page structure
-style.css    — design system (dark BCH theme, Space Grotesk + Inter + JetBrains Mono)
-data.js      — PROJECTS array: the single source of truth for every card/filter/detail panel
-app.js       — rendering, filtering, search, modal, QR code, copy-to-clipboard
+style.css    — design system (dark BCH theme)
+data.js      — PROJECTS array (single source of truth)
+app.js       — rendering, filters, search, modal, QR, copy
 ```
 
-## Adding a new project
+## Adding a tool
 
-Add one object to the `PROJECTS` array in `data.js`. Nothing else needs to change — the grid, filters, search, and detail modal all read from this array.
+Add one object to the `PROJECTS` array in `data.js`. Nothing else needs to change.
 
 ```js
 {
@@ -32,17 +38,20 @@ Add one object to the `PROJECTS` array in `data.js`. Nothing else needs to chang
 }
 ```
 
-`status` is one of `finished | beta | unfinished | archived`.
-`category` is one of `main | defi`.
+- `status`: `finished` | `beta` | `unfinished` | `archived`  
+- `category`: `main` (Wider Ecosystem) | `defi` (BCH DeFi)
 
-## Data integrity
+## Maintainer
 
-No invented users, downloads, transactions, funding, revenue, partnerships, launch dates, or performance stats. Where information isn't verified, it's left out rather than guessed.
+**alberdioni8406**
 
-## Deploying
+- X: https://x.com/alberdioni8406_  
+- Telegram: https://t.me/alberdioni8406  
+- Email: alberdioni8406@proton.me  
+- GitHub: https://github.com/alberdioni8406  
 
-Static site — deploy as-is on Vercel (or any static host). No environment variables or serverless functions required.
+## Deploy
 
-## Support
+Static site — deploy as-is on Vercel or any static host. No env vars required for the frontend.
 
-`bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`
+Suggested domain: **bchtools.cash** (or point an existing domain at this static output).

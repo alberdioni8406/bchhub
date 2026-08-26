@@ -47,8 +47,8 @@
   function render() {
     const filtered = PROJECTS.filter(matches);
     grid.innerHTML = filtered.map((p) => cardHTML(p, PROJECTS.indexOf(p))).join("") ||
-      `<p style="grid-column:1/-1; color:var(--ink-faint);">No projects match those filters.</p>`;
-    resultCount.textContent = `${filtered.length} of ${PROJECTS.length} projects`;
+      `<p style="grid-column:1/-1; color:var(--ink-faint);">No tools match those filters.</p>`;
+    resultCount.textContent = `${filtered.length} of ${PROJECTS.length} tools`;
     bindDetailButtons();
   }
 
@@ -60,20 +60,14 @@
 
   function renderStats() {
     document.getElementById("statProjectCount").textContent = PROJECTS.length;
+    const finished = PROJECTS.filter(p => p.status === "finished").length;
+    const inProgress = PROJECTS.filter(p => p.status === "beta" || p.status === "unfinished").length;
+    document.getElementById("statFinished").textContent = finished;
+    document.getElementById("statInProgress").textContent = inProgress;
     document.getElementById("countMain").textContent =
-      PROJECTS.filter(p => p.category === "main").length + " projects";
+      PROJECTS.filter(p => p.category === "main").length + " tools";
     document.getElementById("countDefi").textContent =
-      PROJECTS.filter(p => p.category === "defi").length + " projects";
-  }
-
-  function renderTimeline() {
-    const el = document.getElementById("timelineList");
-    el.innerHTML = TIMELINE.map(t => `
-      <div class="timeline-item">
-        <div class="timeline-period">${t.period}</div>
-        <h4>${t.label}</h4>
-        <p>${t.note}</p>
-      </div>`).join("");
+      PROJECTS.filter(p => p.category === "defi").length + " tools";
   }
 
   // ---------- Filter bar wiring ----------
@@ -107,7 +101,7 @@
       if (target) target.classList.add("active");
       state.category = value;
       render();
-      document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("tools").scrollIntoView({ behavior: "smooth" });
     }
   }
   window.addEventListener("hashchange", applyCategoryFromHash);
@@ -142,7 +136,7 @@
 
       ${p.whatsNext ? `<div class="modal-section"><h5>What's next</h5><p>${p.whatsNext}</p></div>` : ""}
 
-      ${p.supportNeeded ? `<div class="modal-section"><h5>How this project could use help</h5>
+      ${p.supportNeeded ? `<div class="modal-section"><h5>How this tool could use help</h5>
         <div class="needs-support-tags">${p.supportNeeded.map(s => `<span class="support-flag">${SUPPORT_LABELS[s]}</span>`).join("")}</div>
       </div>` : ""}
 
@@ -202,7 +196,6 @@
         colorLight: "#ffffff"
       });
     } else {
-      // Retry shortly if the CDN script hasn't finished loading yet
       setTimeout(renderQR, 300);
     }
   }
@@ -214,7 +207,6 @@
   renderStats();
   render();
   renderNeedsSupport();
-  renderTimeline();
   renderQR();
   applyCategoryFromHash();
 })();
