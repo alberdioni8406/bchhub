@@ -10,12 +10,24 @@ const BUILDER = {
   name: "alberdioni8406",
   tagline: "Maintainer · BCH tools for the community",
   github: "https://github.com/alberdioni8406",
+  siteRepo: "https://github.com/alberdioni8406/bchhub",
   x: "https://x.com/alberdioni8406_",
   telegram: "https://t.me/alberdioni8406",
   email: "alberdioni8406@proton.me",
   donationAddress: "bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040",
   tokenAwareDonationAddress: "bitcoincash:zz7pjvq99kylyvns6fjmyawjhxwnucgn2qwyae2ye9"
 };
+
+/** Featured tool of the month — change slug to rotate. Must match a PROJECTS slug. */
+const FEATURED_SLUG = "cauldron-radar";
+
+/** Static “what support funded” notes — update manually when something ships. */
+const SUPPORT_FUNDED = [
+  { period: "Aug 2026", note: "bchtools.cash custom domain + site rebuild as a community tools showcase." },
+  { period: "2026", note: "Cauldron Radar live analytics kept online and improved with community feedback." },
+  { period: "2026", note: "CashCompass, Compass Pay, StableShift, BCHnostr.live — finished tools maintained for public use." }
+];
+
 
 // Status: "finished" | "beta" | "unfinished" | "archived"
 // Category: "main" | "defi"

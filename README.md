@@ -2,6 +2,8 @@
 
 A visual space to showcase **BCH tools** for the Bitcoin Cash community — part of **CashCompass**.
 
+Live: **https://www.bchtools.cash/**
+
 Finished products and unfinished work are both listed, classified as:
 
 - **Wider Ecosystem** — network, payments, CashTokens, explorers, community, infrastructure  
@@ -9,49 +11,54 @@ Finished products and unfinished work are both listed, classified as:
 
 ## Community funding
 
-All tools (finished or not) depend on community support. Custom domains, hosting, APIs, maintenance, and development are not free. Donations help decide what stays online and what gets the next round of work.
+All tools (finished or not) depend on community support. Custom domains, hosting, APIs, maintenance, and development are not free.
 
-**Donation address:**  
-`bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`
+**BCH:** `bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`  
+**Token-aware:** `bitcoincash:zz7pjvq99kylyvns6fjmyawjhxwnucgn2qwyae2ye9`
+
+## What's on the site
+
+- Cost transparency ("what support covers" / "without support")
+- Featured tool of the month (`FEATURED_SLUG` in `data.js`)
+- Dual donation addresses + QR codes
+- Per-tool: Open · Source · Details · **I use this** (localStorage) · Feedback (mailto) · Share X / Telegram
+- Unfinished tools invitation block
+- "What support has funded" list (edit `SUPPORT_FUNDED` in `data.js`)
+- Open-source CTAs for tools and this site
 
 ## Architecture
 
-Plain HTML / CSS / vanilla JS. No framework, no build step.
+100% static. No framework, no build step, no new dependencies beyond the existing QRCode CDN script.
 
 ```
-index.html   — page structure
-style.css    — design system (dark BCH theme)
-data.js      — PROJECTS array (single source of truth)
-app.js       — rendering, filters, search, modal, QR, copy
+index.html   — structure
+style.css    — design system
+data.js      — PROJECTS, FEATURED_SLUG, SUPPORT_FUNDED, BUILDER
+app.js       — render, filters, modal, participate, QR
 ```
 
-## Adding a tool
+## Rotate featured tool
 
-Add one object to the `PROJECTS` array in `data.js`. Nothing else needs to change.
+In `data.js` set:
 
 ```js
-{
-  name, slug, status, category, tags,
-  description, longDescription, whyBuilt,
-  features, dataSources, whatsNext,
-  liveUrl, githubUrl, supportNeeded
-}
+const FEATURED_SLUG = "cauldron-radar"; // any PROJECTS slug
 ```
 
-- `status`: `finished` | `beta` | `unfinished` | `archived`  
-- `category`: `main` (Wider Ecosystem) | `defi` (BCH DeFi)
+## Add a tool
+
+Add one object to `PROJECTS` in `data.js`.
 
 ## Maintainer
 
 **alberdioni8406**
 
-- X: https://x.com/alberdioni8406_  
-- Telegram: https://t.me/alberdioni8406  
-- Email: alberdioni8406@proton.me  
-- GitHub: https://github.com/alberdioni8406  
+- X: https://x.com/alberdioni8406_
+- Telegram: https://t.me/alberdioni8406
+- Email: alberdioni8406@proton.me
+- GitHub: https://github.com/alberdioni8406
+- This site: https://github.com/alberdioni8406/bchhub
 
 ## Deploy
 
-Static site — deploy as-is on Vercel or any static host. No env vars required for the frontend.
-
-Suggested domain: **bchtools.cash** (or point an existing domain at this static output).
+Static — push to the GitHub / Vercel project behind **bchtools.cash**. No env vars required for the frontend.
