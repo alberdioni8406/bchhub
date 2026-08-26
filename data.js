@@ -18,7 +18,6 @@ const BUILDER = {
   tokenAwareDonationAddress: "bitcoincash:zz7pjvq99kylyvns6fjmyawjhxwnucgn2qwyae2ye9"
 };
 
-/** Featured tool of the month — change slug to rotate. Must match a PROJECTS slug. */
 const FEATURED_SLUG = "cauldron-radar";
 
 /** Static “what support funded” notes — update manually when something ships. */
