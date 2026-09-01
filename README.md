@@ -1,64 +1,43 @@
 # BCHtools.cash
 
-A visual space to showcase **BCH tools** for the Bitcoin Cash community — part of **CashCompass**.
+A community-supported home for independent Bitcoin Cash tools.
 
-Live: **https://www.bchtools.cash/**
+Live: **https://bchtools.cash**
 
-Finished products and unfinished work are both listed, classified as:
+## Positioning
 
-- **Wider Ecosystem** — network, payments, CashTokens, explorers, community, infrastructure  
-- **BCH DeFi** — liquidity, trading, stablecoins, token markets  
+These tools are free to use. Keeping them alive isn’t free.
 
-## Community funding
-
-All tools (finished or not) depend on community support. Custom domains, hosting, APIs, maintenance, and development are not free.
-
-**BCH:** `bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`  
-**Token-aware:** `bitcoincash:zz7pjvq99kylyvns6fjmyawjhxwnucgn2qwyae2ye9`
-
-## What's on the site
-
-- Cost transparency ("what support covers" / "without support")
-- Featured tool of the month (`FEATURED_SLUG` in `data.js`)
-- Dual donation addresses + QR codes
-- Per-tool: Open · Source · Details · **I use this** (localStorage) · Feedback (mailto) · Share X / Telegram
-- Unfinished tools invitation block
-- "What support has funded" list (edit `SUPPORT_FUNDED` in `data.js`)
-- Open-source CTAs for tools and this site
+Domains, hosting, APIs, maintenance and development time all cost something. Community support helps keep the collection online, maintained and growing.
 
 ## Architecture
 
-100% static. No framework, no build step, no new dependencies beyond the existing QRCode CDN script.
+100% static. No framework, no build step, no backend.
 
 ```
 index.html   — structure
 style.css    — design system
-data.js      — PROJECTS, FEATURED_SLUG, SUPPORT_FUNDED, BUILDER
-app.js       — render, filters, modal, participate, QR
+data.js      — PROJECTS, FUNDRAISER, SUPPORT_FUNDED, FUNDING_STATUS, BUILDER
+app.js       — render, filters, modal, participate, QR, copy
+vercel.json  — deployment
 ```
 
-## Rotate featured tool
+## Fundraiser
 
-In `data.js` set:
+Primary BCH address (do not replace):
 
-```js
-const FEATURED_SLUG = "cauldron-radar"; // any PROJECTS slug
-```
+`bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`
 
-## Add a tool
+Token-aware address remains available for CashTokens.
 
-Add one object to `PROJECTS` in `data.js`.
+## Tools
 
-## Maintainer
+- **Finished** — including Ghostroom (BCH-enabled anonymous chat)
+- **Nearly Finished** — BCHBooks (ready for custom domain + final polish)
+- **Beta / In Development** — remaining tools in the pipeline
 
-**alberdioni8406**
+Status and content live in `data.js`. Rotate the featured tool via `FEATURED_SLUG`.
 
-- X: https://x.com/alberdioni8406_
-- Telegram: https://t.me/alberdioni8406
-- Email: alberdioni8406@proton.me
-- GitHub: https://github.com/alberdioni8406
-- This site: https://github.com/alberdioni8406/bchhub
+## Local preview
 
-## Deploy
-
-Static — push to the GitHub / Vercel project behind **bchtools.cash**. No env vars required for the frontend.
+Open `index.html` in a browser, or serve the folder with any static server.
