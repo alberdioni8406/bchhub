@@ -271,6 +271,28 @@ const PROJECTS = [
     supportNeeded: ["users", "feedback"]
   },
   {
+    name: "CASHRUSH",
+    slug: "cashrush",
+    status: "beta",
+    category: "main",
+    tags: ["Games", "Community"],
+    description: "A fast, no-account browser game built for replayable runs — with a Bitcoin Cash world woven quietly into it.",
+    longDescription: "CASHRUSH is a browser game built around the same instinct as the simple games people play instantly, without accounts or onboarding: chase a score, beat your last run, come back for one more. An achievement system rewards returning, and somewhere between the obstacles and unlocks, a world connected to Bitcoin Cash starts showing up. Gameplay comes first — there's no forced lesson or interruption.",
+    whyBuilt: "To let people discover Bitcoin Cash through curiosity rather than a classroom — the game has to work as a game first.",
+    features: [
+      "Instant start, no accounts",
+      "Score-chasing runs built for replayability",
+      "An achievement system that rewards coming back",
+      "A Bitcoin Cash world woven into the game rather than bolted on"
+    ],
+    dataSources: null,
+    whatsNext: "Live and playable now on a temporary Vercel domain. Still needed: a custom domain, community feedback and playtesting, and continued balancing and polish. Optional BCH and CashToken integrations are a future possibility once the core game is solid — not a current feature.",
+    liveUrl: "https://cashrush-play.vercel.app",
+    githubUrl: null,
+    needs: "Custom domain, feedback, and continued development",
+    supportNeeded: ["funding", "feedback", "users"]
+  },
+  {
     name: "BCH Lab",
     slug: "bch-lab",
     status: "in-development",
