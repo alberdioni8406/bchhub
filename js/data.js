@@ -216,7 +216,7 @@ const PROJECTS = [
     dataSources: null,
     whatsNext: null,
     liveUrl: "https://ghostroom.xyz",
-    githubUrl: null,
+    githubUrl: "https://github.com/alberdioni8406/ghostroom",
     needs: null,
     supportNeeded: null,
     bchLabel: "BCH-enabled"
@@ -240,7 +240,7 @@ const PROJECTS = [
     dataSources: null,
     whatsNext: "Custom domain + final polish. Ready for permanent launch.",
     liveUrl: "https://bchbooks.vercel.app",
-    githubUrl: null,
+    githubUrl: "https://github.com/alberdioni8406/bchbooks",
     needs: "Custom domain + final polish",
     supportNeeded: ["funding"]
   },
@@ -288,7 +288,7 @@ const PROJECTS = [
     dataSources: null,
     whatsNext: "Live and playable now on a temporary Vercel domain. Still needed: a custom domain, community feedback and playtesting, and continued balancing and polish. Optional BCH and CashToken integrations are a future possibility once the core game is solid — not a current feature.",
     liveUrl: "https://cashrush-play.vercel.app",
-    githubUrl: null,
+    githubUrl: "https://github.com/alberdioni8406/cashrush-play",
     needs: "Custom domain, feedback, and continued development",
     supportNeeded: ["funding", "feedback", "users"]
   },
