@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fund Me Tools — BCHtools.cash</title>
+<meta name="description" content="Ongoing, no-deadline support for independent Bitcoin Cash tools. Hosting, domains, APIs, and development time never stop being needed.">
+<meta property="og:title" content="Fund Me Tools — BCHtools.cash">
+<meta property="og:description" content="Tools don't wait for a fundraising campaign to start working. There's no deadline because the work doesn't have one either.">
+<meta property="og:url" content="https://bchtools.cash/fundmetools.html">
+<link rel="canonical" href="https://bchtools.cash/fundmetools.html">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><span class="dot"></span>BCHtools<span class="term-cursor"></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
+        <li><a href="tools.html"><span class="nav-num">02</span>The Tools</a></li>
+        <li><a href="finished.html"><span class="nav-num">03</span>Finished</a></li>
+        <li><a href="lab.html"><span class="nav-num">04</span>In The Lab</a></li>
+        <li><a href="awaiting-signal.html"><span class="nav-num">05</span>Awaiting Signal</a></li>
+        <li><a href="highlighted.html"><span class="nav-num">06</span>Highlighted</a></li>
+        <li><a href="cashrush.html"><span class="nav-num">07</span>CASHRUSH</a></li>
+        <li><a href="fundmetools.html"><span class="nav-num">08</span>Fund Me Tools</a></li>
+        <li><a href="about.html"><span class="nav-num">09</span>About</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="fundmetools.html" class="nav-cta">Support ↗</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="fmt-hero">
+      <div class="wrap">
+        <p class="page-kicker">08 // FUND ME TOOLS</p>
+        <h1>There is no deadline.<br>Because maintenance doesn't have one either.</h1>
+        <p class="lede">This is not a crowdfunding campaign. There's no expiration date, no target that ends things if it isn't reached. Tools need upkeep whether or not a campaign is running — so this page just stays open.</p>
+
+        <div class="fmt-honest-block">
+          <p>"Tools don't wait for a fundraising campaign to start working. They need maintenance while nobody is watching. They break at inconvenient times. APIs change. Domains expire. New ideas appear at 2 AM."</p>
+          <p>"And yes — sometimes the person maintaining them needs a few coins for hosting... and perhaps a Red Bull to stay awake and keep building."</p>
+        </div>
+
+        <div class="no-deadline-row">
+          <div class="no-deadline-card"><div class="ndc-label">NO DEADLINE</div><p>Because maintenance does not have one.</p></div>
+          <div class="no-deadline-card"><div class="ndc-label">THE WORK CONTINUES</div><p>Whether today is a funding day or a building day.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" style="border-top:none;">
+      <div class="wrap">
+        <div class="support-layout">
+          <div class="donation-card">
+            <h3>Support BCHtools</h3>
+            <p class="donation-currency mono">BCH — Bitcoin Cash</p>
+            <div class="address-block">
+              <span class="address-text mono" id="donationAddress"></span>
+              <div class="address-actions">
+                <button class="btn btn-primary btn-sm" id="copyAddressBtn">Copy address</button>
+                <button class="btn btn-ghost btn-sm" id="showQrBtn">Show QR</button>
+              </div>
+            </div>
+            <div class="qr-panel" id="qrPanel" hidden>
+              <div id="qr-canvas"></div>
+              <p class="qr-hint">Scan with any BCH wallet</p>
+            </div>
+            <p class="donation-note" id="copyFeedback"></p>
+            <p class="cost-note">Any amount helps. Domains, hosting, APIs and development time are recurring costs.</p>
+
+            <div class="token-secondary">
+              <span class="donate-label">Token-aware address (CashTokens)</span>
+              <div class="address-row">
+                <span class="mono" id="tokenDonationAddress"></span>
+                <button class="copy-btn" id="copyTokenAddressBtn">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="where-goes">
+            <h3>What support makes possible</h3>
+            <ul class="goes-list">
+              <li><strong>Keeping the lights on</strong> — domains, hosting, infrastructure, and APIs.</li>
+              <li><strong>Keeping the tools alive</strong> — maintenance, bug fixes, updates, and compatibility improvements.</li>
+              <li><strong>Building the next thing</strong> — development time for experiments and new BCH projects.</li>
+              <li><strong>Polishing what already exists</strong> — many tools don't need reinventing, just more time to become excellent.</li>
+              <li><strong>Builder fuel</strong> — coffee, internet, electricity, and occasionally, a Red Bull.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="priorities-block">
+          <h3 id="prioritiesTitle">Current funding priorities</h3>
+          <ul class="priorities-list" id="prioritiesList"></ul>
+        </div>
+
+        <div class="history-block">
+          <h3>What support has already funded</h3>
+          <ul class="funded-list" id="fundedList"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="brand"><span class="dot"></span>BCHtools</a>
+          <p class="footer-note">An independent, community-supported home for Bitcoin Cash tools. Built and maintained by alberdioni8406.</p>
+          <div class="footer-donate">
+            <span class="donate-label">Support address (BCH)</span>
+            <div class="address-row compact">
+              <span class="mono" id="footerAddress"></span>
+              <button class="copy-btn" id="footerCopyBtn">Copy</button>
+            </div>
+          </div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="tools.html">The Tools</a></li>
+          <li><a href="finished.html">Finished</a></li>
+          <li><a href="lab.html">In The Lab</a></li>
+          <li><a href="awaiting-signal.html">Awaiting Signal</a></li>
+          <li><a href="highlighted.html">Highlighted</a></li>
+          <li><a href="cashrush.html">CASHRUSH</a></li>
+          <li><a href="fundmetools.html">Fund Me Tools</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
+          <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X / Twitter</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-note">© <span id="year"></span> BCHtools.cash — built by alberdioni8406. No tracking. No accounts. No deadline on building.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

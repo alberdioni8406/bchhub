@@ -107,6 +107,7 @@
   }
 
   function render() {
+    if (!grid) return;
     const filtered = PROJECTS.filter(matches);
     grid.innerHTML = filtered.map((p) => cardHTML(p, PROJECTS.indexOf(p))).join("") ||
       `<p style="grid-column:1/-1; color:var(--ink-faint);">No tools match those filters.</p>`;
@@ -116,7 +117,9 @@
   }
 
   function renderStats() {
-    document.getElementById("statProjectCount").textContent = PROJECTS.length;
+    const countEl = document.getElementById("statProjectCount");
+    if (!countEl) return;
+    countEl.textContent = PROJECTS.length;
     const finished = PROJECTS.filter(p => p.status === "finished").length;
     const inProgress = PROJECTS.filter(p =>
       p.status === "beta" || p.status === "in-development" || p.status === "nearly-finished"
@@ -317,6 +320,55 @@
   document.querySelectorAll(".nav-links a").forEach(a => {
     a.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open"));
   });
+
+  // ---------- Active nav highlighting ----------
+  (function markActiveNav() {
+    const here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    document.querySelectorAll(".nav-links a[href]").forEach(a => {
+      const href = a.getAttribute("href").toLowerCase();
+      if (href === here || (here === "" && href === "index.html")) {
+        a.classList.add("active");
+      }
+    });
+  })();
+
+  // ---------- Generic filtered list renderer (used by Finished / Lab / Awaiting Signal pages) ----------
+  function renderListPage(gridId, countId, filterFn, emptyMsg) {
+    const listGrid = document.getElementById(gridId);
+    if (!listGrid) return;
+    const items = PROJECTS.filter(filterFn);
+    listGrid.innerHTML = items.map((p) => cardHTML(p, PROJECTS.indexOf(p))).join("") ||
+      `<p class="empty-state">${emptyMsg || "Nothing here yet."}</p>`;
+    const countEl = countId ? document.getElementById(countId) : null;
+    if (countEl) countEl.textContent = `${items.length} tool${items.length === 1 ? "" : "s"}`;
+    listGrid.querySelectorAll(".details-btn").forEach(btn => {
+      btn.addEventListener("click", () => openModal(btn.dataset.slug));
+    });
+    listGrid.querySelectorAll(".btn-use").forEach(btn => {
+      btn.onclick = () => {
+        const n = setUseSignal(btn.dataset.slug);
+        btn.textContent = `I use this (${n})`;
+      };
+    });
+  }
+
+  renderListPage(
+    "finishedGrid", "finishedCount",
+    (p) => p.status === "finished",
+    "No finished tools yet."
+  );
+
+  renderListPage(
+    "labGrid", "labCount",
+    (p) => p.status === "beta" || p.status === "in-development" || p.status === "nearly-finished",
+    "Nothing in the lab right now."
+  );
+
+  renderListPage(
+    "awaitingGrid", "awaitingCount",
+    (p) => Array.isArray(p.supportNeeded) && p.supportNeeded.length > 0,
+    "Everything is currently fully staffed. Check back soon."
+  );
 
   // ---------- Donation / QR ----------
   const addr = (typeof FUNDRAISER !== "undefined" && FUNDRAISER.address) || BUILDER.donationAddress;
