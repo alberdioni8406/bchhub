@@ -17,15 +17,15 @@
 <link rel="me" href="https://x.com/alberdioni8406_">
 <link rel="me" href="https://t.me/alberdioni8406">
 <link rel="me" href="https://github.com/alberdioni8406">
-<meta name="twitter:title" content="Finished tools — BCHtools.cash">
-<meta name="twitter:description" content="They started as ideas. Now you can use them.">
-<meta name="twitter:url" content="https://bchtools.cash/finished.html">
-<title>Finished — BCHtools.cash</title>
-<meta name="description" content="Ideas that became real. Finished independent Bitcoin Cash tools you can use today. Finished does not mean abandoned.">
-<meta property="og:title" content="Finished tools — BCHtools.cash">
-<meta property="og:description" content="They started as ideas. Now you can use them.">
+<meta name="twitter:title" content="Awaiting Signal — BCHtools.cash">
+<meta name="twitter:description" content="Projects that could move faster with support, visibility, or a final push.">
+<meta name="twitter:url" content="https://bchtools.cash/awaiting.html">
+<title>Awaiting Signal — BCHtools.cash</title>
+<meta name="description" content="Bitcoin Cash tools that need a domain, polish, feedback, or community support to move forward.">
+<meta property="og:title" content="Awaiting Signal — BCHtools.cash">
+<meta property="og:description" content="Projects that could move faster with support, visibility, or a final push.">
 <link rel="stylesheet" href="css/main.css">
-<meta property="og:url" content="https://bchtools.cash/finished.html">
+<meta property="og:url" content="https://bchtools.cash/awaiting.html">
 </head>
 <body>
 <header class="site-nav">
@@ -35,9 +35,9 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="tools.html">The Tools</a></li>
-        <li><a href="finished.html" class="active">Finished</a></li>
+        <li><a href="finished.html">Finished</a></li>
         <li><a href="lab.html">In the Lab</a></li>
-        <li><a href="awaiting.html">Awaiting Signal</a></li>
+        <li><a href="awaiting.html" class="active">Awaiting Signal</a></li>
         <li><a href="cashrush.html">CASHRUSH</a></li>
         <li><a href="fundmetools.html">Fund Me Tools</a></li>
         <li><a href="about.html">About</a></li>
@@ -52,17 +52,21 @@
 <main>
   <div class="page-header">
     <div class="wrap">
-      <div class="page-num">03 // FINISHED</div>
-      <h1>They started as ideas.<br>Now you can use them.</h1>
-      <p class="lede">Finished does not mean abandoned. These tools escaped the laboratory. Some continue to evolve. All of them are real and free to use.</p>
+      <div class="page-num">05 // AWAITING SIGNAL</div>
+      <h1>One more push.</h1>
+      <p class="lede">These projects are close — or could move faster — with domain, polish, feedback, visibility, or development time. Supporting them is not a pressure campaign. It is a way to help something useful become usable.</p>
     </div>
   </div>
   <section>
     <div class="wrap">
+      <div class="signal-block" style="margin-bottom:28px;">
+        <p>What is often missing: a custom domain, final polish, API access, hosting, testing, community feedback, or simply more hours of focused work.</p>
+        <p>There is one central fund channel for the whole ecosystem. No separate addresses per tool.</p>
+      </div>
       <div class="project-grid" id="projectGrid"></div>
       <div class="hero-actions mt-24">
-        <a href="lab.html" class="btn btn-ghost">See what is still in the lab →</a>
-        <a href="fundmetools.html" class="btn btn-primary">Keep them online</a>
+        <a href="fundmetools.html" class="btn btn-primary">Fund Me Tools</a>
+        <a href="cashrush.html" class="btn btn-amber">CASHRUSH</a>
       </div>
     </div>
   </section>
@@ -80,7 +84,6 @@
       <p class="footer-note">Independent Bitcoin Cash tools. Free to use. Community-supported.</p>
     </div>
     <ul class="footer-links">
-      <li><a href="lab.html">In the Lab</a></li>
       <li><a href="fundmetools.html">Fund Me</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
@@ -92,7 +95,7 @@
 <script src="js/common.js"></script>
 <script>
 BCH.boot();
-BCH.renderGrid("projectGrid", getFinished());
+BCH.renderGrid("projectGrid", getAwaiting());
 </script>
 </body>
 </html>

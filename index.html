@@ -2,179 +2,215 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>BCHtools.cash — Independent Bitcoin Cash Tools</title>
-<meta name="description" content="A living archive of independent Bitcoin Cash tools — finished, in the lab, and awaiting signal. Built and maintained by alberdioni8406.">
-<meta property="og:title" content="BCHtools.cash — Independent Bitcoin Cash Tools">
-<meta property="og:description" content="Tools don't just get built. They get maintained. They evolve. Some disappear. Some change everything.">
-<meta property="og:url" content="https://bchtools.cash">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://bchtools.cash">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
-<link rel="shortcut icon" href="assets/favicon.ico">
-<link rel="manifest" href="assets/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.svg">
 <meta name="theme-color" content="#06100c">
 <meta name="author" content="alberdioni8406">
-<meta property="og:site_name" content="BCHtools.cash">
-<meta property="og:image" content="https://bchtools.cash/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="BCHtools.cash — independent Bitcoin Cash tools">
-<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@alberdioni8406_">
 <meta name="twitter:creator" content="@alberdioni8406_">
-<meta name="twitter:image" content="https://bchtools.cash/assets/og-image.png">
-<meta name="telegram:channel" content="@alberdioni8406">
-<meta name="twitter:title" content="BCHtools.cash — Independent Bitcoin Cash Tools">
-<meta name="twitter:description" content="Tools don't just get built. They get maintained. They evolve. Some disappear. Some change everything.">
-<link rel="stylesheet" href="css/style.css">
+<meta property="og:site_name" content="BCHtools.cash">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="me" href="https://x.com/alberdioni8406_">
+<link rel="me" href="https://t.me/alberdioni8406">
+<link rel="me" href="https://github.com/alberdioni8406">
+<meta name="twitter:title" content="BCHtools.cash — Tools don't just get built. They get maintained.">
+<meta name="twitter:description" content="A cypherpunk corner of the Bitcoin Cash internet. Discover finished tools, experiments in the lab, and Fund Me Tools — ongoing support with no expiration.">
+<meta name="twitter:url" content="https://bchtools.cash/">
+<title>BCHtools.cash — Cypherpunk tool universe for Bitcoin Cash</title>
+<meta name="description" content="Independent Bitcoin Cash tools. Finished. In the lab. Awaiting signal. A living collection kept alive by the community. No deadlines. Just building.">
+<meta property="og:title" content="BCHtools.cash — Tools don't just get built. They get maintained.">
+<meta property="og:description" content="A cypherpunk corner of the Bitcoin Cash internet. Discover finished tools, experiments in the lab, and Fund Me Tools — ongoing support with no expiration.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bchtools.cash/">
+<link rel="stylesheet" href="css/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 </head>
 <body>
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><span class="dot"></span>BCHtools<span class="term-cursor"></span></a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="cursor"></span> BCHTOOLS</a>
+    <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
-        <li><a href="tools.html"><span class="nav-num">02</span>The Tools</a></li>
-        <li><a href="finished.html"><span class="nav-num">03</span>Finished</a></li>
-        <li><a href="lab.html"><span class="nav-num">04</span>In The Lab</a></li>
-        <li><a href="awaiting-signal.html"><span class="nav-num">05</span>Awaiting Signal</a></li>
-        <li><a href="highlighted.html"><span class="nav-num">06</span>Highlighted</a></li>
-        <li><a href="cashrush.html"><span class="nav-num">07</span>CASHRUSH</a></li>
-        <li><a href="fundmetools.html"><span class="nav-num">08</span>Fund Me Tools</a></li>
-        <li><a href="about.html"><span class="nav-num">09</span>About</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tools.html">The Tools</a></li>
+        <li><a href="finished.html">Finished</a></li>
+        <li><a href="lab.html">In the Lab</a></li>
+        <li><a href="awaiting.html">Awaiting Signal</a></li>
+        <li><a href="cashrush.html">CASHRUSH</a></li>
+        <li><a href="fundmetools.html">Fund Me Tools</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
-      <div class="nav-right">
-        <a href="fundmetools.html" class="nav-cta">Support ↗</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero crt-flicker">
-      <div class="hero-grid"></div>
-      <div class="wrap">
-        <p class="eyebrow term-cursor">&gt; BCHTOOLS.CASH</p>
-        <h1>Tools don't just get built.<br>They get <span class="accent">maintained</span>. They evolve.<br>Some disappear. Some change everything.</h1>
-        <p class="lede">BCHtools.cash is a living archive of independent Bitcoin Cash tools — finished, in the lab, and waiting for a push. Built one project at a time by a single independent developer, kept online by the people who use them.</p>
-        <div class="hero-actions">
-          <a href="tools.html" class="btn btn-primary">Browse the tools →</a>
-          <a href="fundmetools.html" class="btn btn-ghost">Fund me tools</a>
-        </div>
-        <div class="stat-strip">
-          <div class="stat-cell"><div class="num" id="statProjectCount">–</div><div class="label">Tools tracked</div></div>
-          <div class="stat-cell"><div class="num" id="statFinished">–</div><div class="label">Finished</div></div>
-          <div class="stat-cell"><div class="num" id="statInProgress">–</div><div class="label">In progress</div></div>
-          <div class="stat-cell"><div class="num">1</div><div class="label">Builder</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="signal">
-      <div class="wrap">
-        <p class="eyebrow">// The Signal</p>
-        <h2>Bitcoin Cash is not just a blockchain.</h2>
-        <div class="signal-block">
-          <p>It's made of people building things. Some projects are finished. Some are still becoming something. Some need one final push. Some simply need to be discovered.</p>
-          <div class="signal-lines">
-            <div><span>&gt;</span>finished tools stay online because someone keeps paying for hosting.</div>
-            <div><span>&gt;</span>unfinished tools are not failures — they're mid-transmission.</div>
-            <div><span>&gt;</span>every project on this site is real. No placeholders, no fake stats.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="featured">
-      <div class="wrap">
-        <p class="eyebrow">// Intercepted Transmission</p>
-        <h2>Currently highlighted</h2>
-        <p class="lede">The featured slot rotates across the tools in this archive — manually chosen, never ranked by hype.</p>
-        <div class="featured-panel">
-          <div id="featuredCard"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="explore">
-      <div class="wrap">
-        <p class="eyebrow">// Explore The Universe</p>
-        <h2>Pick a path through the archive</h2>
-        <div class="pathways-grid">
-          <a href="finished.html" class="pathway-card"><span class="pw-id">03 // FINISHED</span><h4>Finished tools</h4><p>Ideas that became real and are live today.</p><span class="pw-arrow">→</span></a>
-          <a href="lab.html" class="pathway-card"><span class="pw-id">04 // IN THE LAB</span><h4>In the lab</h4><p>Actively being built — betas, prototypes, works in progress.</p><span class="pw-arrow">→</span></a>
-          <a href="awaiting-signal.html" class="pathway-card"><span class="pw-id">05 // AWAITING SIGNAL</span><h4>Awaiting signal</h4><p>Projects that could move faster with support, feedback, or users.</p><span class="pw-arrow">→</span></a>
-          <a href="highlighted.html" class="pathway-card"><span class="pw-id">06 // HIGHLIGHTED</span><h4>Highlighted</h4><p>An editorial spotlight — worth your time, no fake rankings.</p><span class="pw-arrow">→</span></a>
-          <a href="cashrush.html" class="pathway-card"><span class="pw-id">07 // CASHRUSH</span><h4>CASHRUSH</h4><p>Just one more run. A browser game with a secret.</p><span class="pw-arrow">→</span></a>
-          <a href="fundmetools.html" class="pathway-card"><span class="pw-id">08 // FUND ME TOOLS</span><h4>Fund Me Tools</h4><p>No deadline. No campaign. Just ongoing support.</p><span class="pw-arrow">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-support" class="support-section">
-      <div class="wrap">
-        <p class="eyebrow">// Why Support Matters</p>
-        <h2>Tools don't stay online by accident.</h2>
-        <p class="lede">Hosting costs. Domains cost money. APIs cost money. Development takes time. Maintenance never really stops — whether today is a funding day or a building day.</p>
-        <div class="why-grid">
-          <div class="why-card"><h4>Keeping the lights on</h4><p>Domains, hosting, infrastructure, and APIs.</p></div>
-          <div class="why-card"><h4>Keeping the tools alive</h4><p>Maintenance, bug fixes, updates, compatibility.</p></div>
-          <div class="why-card"><h4>Builder fuel</h4><p>Coffee, internet, electricity — and occasionally, a Red Bull.</p></div>
-        </div>
-        <div class="cta-row">
-          <a href="fundmetools.html" class="btn btn-primary">Go to Fund Me Tools →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="index.html" class="brand"><span class="dot"></span>BCHtools</a>
-          <p class="footer-note">An independent, community-supported home for Bitcoin Cash tools. Built and maintained by alberdioni8406.</p>
-          <div class="footer-donate">
-            <span class="donate-label">Support address (BCH)</span>
-            <div class="address-row compact">
-              <span class="mono" id="footerAddress"></span>
-              <button class="copy-btn" id="footerCopyBtn">Copy</button>
-            </div>
-          </div>
-        </div>
-        <ul class="footer-links">
-          <li><a href="tools.html">The Tools</a></li>
-          <li><a href="finished.html">Finished</a></li>
-          <li><a href="lab.html">In The Lab</a></li>
-          <li><a href="awaiting-signal.html">Awaiting Signal</a></li>
-          <li><a href="highlighted.html">Highlighted</a></li>
-          <li><a href="cashrush.html">CASHRUSH</a></li>
-          <li><a href="fundmetools.html">Fund Me Tools</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
-          <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X / Twitter</a></li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-note">© <span id="year"></span> BCHtools.cash — built by alberdioni8406. No tracking. No accounts. No deadline on building.</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div id="modalContent"></div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="fundmetools.html" class="nav-cta">Fund Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     </div>
   </div>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="wrap">
+      <p class="eyebrow">BCHTOOLS.CASH // TRANSMISSION</p>
+      <h1>Tools don't just get built.<br>
+        <span class="accent">They get maintained.</span><br>
+        They evolve.<br>
+        Some disappear.<br>
+        Some change everything.</h1>
+      <p class="lede">A living collection of independent Bitcoin Cash tools, experiments, and infrastructure. Free to use. Kept alive by people who want them to exist.</p>
+      <div class="hero-actions">
+        <a href="tools.html" class="btn btn-primary">Explore the universe</a>
+        <a href="fundmetools.html" class="btn btn-ghost">Fund Me Tools</a>
+        <a href="cashrush.html" class="btn btn-amber">CASHRUSH</a>
+      </div>
+      <div class="stat-strip">
+        <div class="stat-cell"><div class="num" id="statTotal">—</div><div class="label">tools</div></div>
+        <div class="stat-cell"><div class="num" id="statFinished">—</div><div class="label">finished</div></div>
+        <div class="stat-cell"><div class="num" id="statLab">—</div><div class="label">in progress</div></div>
+        <div class="stat-cell"><div class="num">OPEN</div><div class="label">fund channel</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">THE SIGNAL</p>
+      <h2>The ecosystem is made of people building things</h2>
+      <div class="signal-block">
+        <p>Some projects are finished. You can use them today.</p>
+        <p>Some are still becoming something. You are looking inside the lab.</p>
+        <p>Some need one final push — a domain, polish, or a few more hours of work.</p>
+        <p>Some simply need people to discover them.</p>
+      </div>
+      <p class="lede">BCHtools.cash is not a directory of dead links. It is a window into what is alive, what is almost ready, and what is still being tested.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">FEATURED TRANSMISSION</p>
+      <h2>Highlighted signal</h2>
+      <div id="featuredCard" class="featured-panel"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">EXPLORE THE UNIVERSE</p>
+      <h2>Choose a path</h2>
+      <div class="path-grid">
+        <a href="finished.html" class="path-card">
+          <div class="path-id">01 // FINISHED</div>
+          <h3>They escaped the lab</h3>
+          <p>Ideas that became real. Use them.</p>
+        </a>
+        <a href="lab.html" class="path-card">
+          <div class="path-id">02 // IN THE LAB</div>
+          <h3>Still being built</h3>
+          <p>Active experiments. Not failures — unfinished work.</p>
+        </a>
+        <a href="awaiting.html" class="path-card">
+          <div class="path-id">03 // AWAITING SIGNAL</div>
+          <h3>Need a push</h3>
+          <p>Domain, polish, feedback, or fuel.</p>
+        </a>
+        <a href="cashrush.html" class="path-card">
+          <div class="path-id">04 // CASHRUSH</div>
+          <h3>Just one more run</h3>
+          <p>Play first. Discover the rest later.</p>
+        </a>
+        <a href="fundmetools.html" class="path-card">
+          <div class="path-id">05 // FUND ME TOOLS</div>
+          <h3>No deadline</h3>
+          <p>Support is always open. Maintenance never stops.</p>
+        </a>
+        <a href="tools.html" class="path-card">
+          <div class="path-id">06 // ALL TOOLS</div>
+          <h3>Full collection</h3>
+          <p>Filter, search, open, source.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">WHY SUPPORT MATTERS</p>
+      <h2>Tools do not stay online by magic</h2>
+      <p class="lede">Domains expire. Hosting costs money. APIs change. Bugs appear at inconvenient times. Development takes time — and occasionally a Red Bull.</p>
+      <p>Building for an ecosystem is continuous work. Fund Me Tools has no campaign end date because the work does not expire either.</p>
+      <div class="hero-actions mt-24">
+        <a href="fundmetools.html" class="btn btn-primary">Open Fund Me Tools</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <div class="brand"><span class="cursor"></span> BCHTOOLS.CASH</div>
+      <p class="footer-note">Independent Bitcoin Cash tools. Free to use. Community-supported. No deadlines.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="fundmetools.html">Fund Me</a></li>
+      <li><a href="cashrush.html">CASHRUSH</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X</a></li>
+    </ul>
+  </div>
+  <div class="wrap footer-bottom">© <span id="year"></span> BCHtools · Cypherpunk tool universe</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script>
+BCH.boot();
+document.getElementById("statTotal").textContent = PROJECTS.length;
+document.getElementById("statFinished").textContent = getFinished().length;
+document.getElementById("statLab").textContent = getLab().length;
+
+(function renderFeatured() {
+  const el = document.getElementById("featuredCard");
+  const p = getBySlug(FEATURED_SLUG) || PROJECTS[0];
+  if (!p || !el) return;
+  const open = p.liveUrl ? `<a class="btn btn-primary btn-sm" href="${p.liveUrl}" target="_blank" rel="noopener">Open ↗</a>` : "";
+  const src = p.githubUrl ? `<a class="btn btn-ghost btn-sm" href="${p.githubUrl}" target="_blank" rel="noopener">Source</a>` : "";
+  el.innerHTML = `
+    <div class="featured-inner">
+      <div>
+        <span class="${BCH.badgeClass(p.status)}">${STATUS_LABELS[p.status]}</span>
+        <h3 style="margin-top:10px;font-size:22px;">${p.name}</h3>
+        <p style="font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);margin-bottom:8px;">${CATEGORY_LABELS[p.category] || ""}</p>
+        <p>${p.description}</p>
+        <div class="card-actions" style="margin-top:14px;">
+          ${open}${src}
+          <button class="btn btn-ghost btn-sm details-btn" data-slug="${p.slug}">Details</button>
+        </div>
+      </div>
+      <div class="featured-why">
+        <h5>Why this matters</h5>
+        <p>${p.whyBuilt || p.longDescription}</p>
+        <a href="fundmetools.html" class="btn btn-primary btn-sm" style="margin-top:12px;">Support the work →</a>
+      </div>
+    </div>`;
+  BCH.bindCards(el);
+})();
+</script>
 </body>
 </html>

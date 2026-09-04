@@ -2,146 +2,160 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CASHRUSH — BCHtools.cash</title>
-<meta name="description" content="CASHRUSH — just one more run. A fast browser game with a Bitcoin Cash world hiding underneath it.">
-<meta property="og:title" content="CASHRUSH — BCHtools.cash">
-<meta property="og:description" content="Play first. Discover the rest later.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.svg">
+<meta name="theme-color" content="#06100c">
+<meta name="author" content="alberdioni8406">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@alberdioni8406_">
+<meta name="twitter:creator" content="@alberdioni8406_">
+<meta property="og:site_name" content="BCHtools.cash">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="me" href="https://x.com/alberdioni8406_">
+<link rel="me" href="https://t.me/alberdioni8406">
+<link rel="me" href="https://github.com/alberdioni8406">
+<meta name="twitter:title" content="CASHRUSH — Just one more run">
+<meta name="twitter:description" content="Play first. Discover the rest later. Already playable — needs domain, polish, and community love.">
+<meta name="twitter:url" content="https://bchtools.cash/cashrush.html">
+<title>CASHRUSH — Just one more run · BCHtools.cash</title>
+<meta name="description" content="CASHRUSH is live and playable. A fast browser game for Bitcoin Cash discovery. Play first. Discover the rest later. Needs custom domain, polish, and community support.">
+<meta property="og:title" content="CASHRUSH — Just one more run">
+<meta property="og:description" content="Play first. Discover the rest later. Already playable — needs domain, polish, and community love.">
+<link rel="stylesheet" href="css/main.css">
 <meta property="og:url" content="https://bchtools.cash/cashrush.html">
-<link rel="canonical" href="https://bchtools.cash/cashrush.html">
-<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><span class="dot"></span>BCHtools<span class="term-cursor"></span></a>
+<body class="page-cashrush">
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="cursor"></span> BCHTOOLS</a>
+    <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
-        <li><a href="tools.html"><span class="nav-num">02</span>The Tools</a></li>
-        <li><a href="finished.html"><span class="nav-num">03</span>Finished</a></li>
-        <li><a href="lab.html"><span class="nav-num">04</span>In The Lab</a></li>
-        <li><a href="awaiting-signal.html"><span class="nav-num">05</span>Awaiting Signal</a></li>
-        <li><a href="highlighted.html"><span class="nav-num">06</span>Highlighted</a></li>
-        <li><a href="cashrush.html"><span class="nav-num">07</span>CASHRUSH</a></li>
-        <li><a href="fundmetools.html"><span class="nav-num">08</span>Fund Me Tools</a></li>
-        <li><a href="about.html"><span class="nav-num">09</span>About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">The Tools</a></li>
+        <li><a href="finished.html">Finished</a></li>
+        <li><a href="lab.html">In the Lab</a></li>
+        <li><a href="awaiting.html">Awaiting Signal</a></li>
+        <li><a href="cashrush.html" class="active">CASHRUSH</a></li>
+        <li><a href="fundmetools.html">Fund Me Tools</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
-      <div class="nav-right">
-        <a href="fundmetools.html" class="nav-cta">Support ↗</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="cashrush-hero">
-      <div class="wrap">
-        <p class="eyebrow cr-eyebrow">// 07 CASHRUSH</p>
-        <h1>CASHRUSH<br><span class="accent-amber">Just one more run.</span></h1>
-        <p class="lede">A fast browser game, the kind you can start instantly — no account, no onboarding, no long list of instructions. Chase a score. Beat your last run. Somewhere along the way, a world connected to Bitcoin Cash starts showing up around the edges.</p>
-        <div class="cr-status-row">
-          <span class="cr-status-chip">Status: live beta</span>
-          <span class="cr-status-chip">Playable now</span>
-          <span class="cr-status-chip">Gameplay before education</span>
-        </div>
-        <div class="hero-actions" style="margin-top:22px;">
-          <a href="https://cashrush-play.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">Play CASHRUSH →</a>
-          <a href="fundmetools.html" class="btn btn-ghost">Support this one</a>
-        </div>
-      </div>
-    </section>
-
-    <section style="border-top:none;">
-      <div class="wrap">
-        <p class="eyebrow">// The Philosophy</p>
-        <h2>Play first. Discover the rest later.</h2>
-        <p class="lede">Simple games become daily habits because they ask for almost nothing up front — thirty seconds, one tap, one run. CASHRUSH is built around that same instinct. No classroom. No forced lesson. No screen that interrupts the run to say "now you will learn about crypto." The game comes first. Curiosity comes on its own.</p>
-
-        <div class="cr-split">
-          <div class="cr-panel">
-            <h4>How it plays</h4>
-            <ul>
-              <li>Instant start, no accounts</li>
-              <li>Score-chasing runs built for replayability</li>
-              <li>An achievement system that rewards coming back</li>
-            </ul>
-          </div>
-          <div class="cr-panel">
-            <h4>What's underneath</h4>
-            <ul>
-              <li>Bitcoin Cash is part of the world, not a lesson bolted onto it</li>
-              <li>Discovery happens between obstacles and achievements, never through interruption</li>
-              <li>Optional BCH and CashToken integrations are a future possibility, not a current feature</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cr-now-later">
-          <div class="cr-now">
-            <h5>What exists today</h5>
-            <p>CASHRUSH is live and playable right now at <a href="https://cashrush-play.vercel.app" target="_blank" rel="noopener" style="color:var(--green-bright);">cashrush-play.vercel.app</a>. It's a temporary Vercel domain — a permanent custom domain is one of the things support goes toward. It's still a beta: expect rough edges, and feedback genuinely shapes what gets fixed next.</p>
-          </div>
-          <div class="cr-later">
-            <h5>What might come later</h5>
-            <p>Optional BCH and CashToken integrations, once the core game itself is solid. Nothing here is promised on a timeline — it's a direction, not a roadmap.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <p class="eyebrow">// Support</p>
-        <h2>It's playable. Now it needs a push.</h2>
-        <p class="lede">CASHRUSH is past the concept stage — the run is done, the game is live. What it needs now is a custom domain instead of a temporary Vercel URL, real player feedback, and continued time to balance and polish. Play a run, tell me what breaks, or chip in toward the domain.</p>
-        <div class="hero-actions">
-          <a href="https://cashrush-play.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">Play CASHRUSH →</a>
-          <a href="fundmetools.html" class="btn btn-ghost">Fund Me Tools →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="index.html" class="brand"><span class="dot"></span>BCHtools</a>
-          <p class="footer-note">An independent, community-supported home for Bitcoin Cash tools. Built and maintained by alberdioni8406.</p>
-          <div class="footer-donate">
-            <span class="donate-label">Support address (BCH)</span>
-            <div class="address-row compact">
-              <span class="mono" id="footerAddress"></span>
-              <button class="copy-btn" id="footerCopyBtn">Copy</button>
-            </div>
-          </div>
-        </div>
-        <ul class="footer-links">
-          <li><a href="tools.html">The Tools</a></li>
-          <li><a href="finished.html">Finished</a></li>
-          <li><a href="lab.html">In The Lab</a></li>
-          <li><a href="awaiting-signal.html">Awaiting Signal</a></li>
-          <li><a href="highlighted.html">Highlighted</a></li>
-          <li><a href="cashrush.html">CASHRUSH</a></li>
-          <li><a href="fundmetools.html">Fund Me Tools</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
-          <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X / Twitter</a></li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-note">© <span id="year"></span> BCHtools.cash — built by alberdioni8406. No tracking. No accounts. No deadline on building.</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div id="modalContent"></div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="fundmetools.html" class="nav-cta">Fund Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     </div>
   </div>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+</header>
+
+<main>
+  <div class="page-header cashrush-hero">
+    <div class="wrap">
+      <div class="page-num">04 // CASHRUSH</div>
+      <h1>Just one more run.</h1>
+      <p class="lede cashrush-tagline">Play first.<br>Discover the rest later.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="cashrush-grid">
+        <div>
+          <p class="eyebrow">WHAT IT IS</p>
+          <h2>A fast browser game</h2>
+          <p>Inspired by the simple games people can play instantly — no accounts, no complicated onboarding, no long list of instructions.</p>
+          <p>Players chase scores. They unlock achievements. They return to beat their previous runs.</p>
+          <p>And somewhere between the obstacles, the achievements, and the progression, they may begin discovering a world connected to Bitcoin Cash.</p>
+        </div>
+        <div class="cashrush-aside">
+          <div class="signal-block">
+            <p><strong>No classroom.</strong></p>
+            <p><strong>No forced lesson.</strong></p>
+            <p><strong>No interruption saying “NOW YOU WILL LEARN ABOUT CRYPTO.”</strong></p>
+            <p>The game comes first. Curiosity comes naturally. Bitcoin Cash is simply part of the world.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">PHILOSOPHY</p>
+      <h2>Simple games become daily habits</h2>
+      <p class="lede">People return to games that feel good to replay. That return is the real opportunity — not a lecture inserted between levels.</p>
+      <div class="why-grid mt-24">
+        <div class="why-card">
+          <h4>Gameplay first</h4>
+          <p>Fun is the product. Everything else is optional and secondary.</p>
+        </div>
+        <div class="why-card">
+          <h4>Achievement system</h4>
+          <p>Scores, unlocks, reasons to come back for one more run.</p>
+        </div>
+        <div class="why-card">
+          <h4>Subtle discovery</h4>
+          <p>Bitcoin Cash lives inside the world. Players who get curious can go deeper. No one is forced.</p>
+        </div>
+        <div class="why-card">
+          <h4>Future options</h4>
+          <p>Room later for optional BCH and CashToken integrations — never required to play.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">STATUS</p>
+      <h2>Approaching completion</h2>
+      <div class="status-panel">
+        <span class="badge badge-nearly-finished">NEARLY FINISHED · LIVE</span>
+        <p class="mt-16">CASHRUSH is already playable. It still needs a custom domain, more polish, player feedback, and community love so it can grow into a strong, gentle onboarding tool for Bitcoin Cash — and more.</p>
+        <p>Gameplay first. Optional BCH / CashToken integrations remain future work. No exaggeration.</p>
+        <div class="hero-actions mt-24">
+          <a class="btn btn-primary" href="https://cashrush-play.vercel.app" target="_blank" rel="noopener">Play CASHRUSH ↗</a>
+          <a href="fundmetools.html" class="btn btn-amber">Support the final push →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">SUPPORT</p>
+      <h2>Help finish the run</h2>
+      <p class="lede">Custom domain, polish, feedback, and community support. Same Fund Me Tools channel as everything else — one address, no separate campaign, no deadline.</p>
+      <div class="hero-actions mt-24">
+        <a href="fundmetools.html" class="btn btn-primary">Open Fund Me Tools</a>
+        <a href="tools.html" class="btn btn-ghost">All tools</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <div class="brand"><span class="cursor"></span> BCHTOOLS.CASH</div>
+      <p class="footer-note">Independent Bitcoin Cash tools. Free to use. Community-supported. No deadlines.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="fundmetools.html">Fund Me</a></li>
+      <li><a href="cashrush.html">CASHRUSH</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X</a></li>
+    </ul>
+  </div>
+  <div class="wrap footer-bottom">© <span id="year"></span> BCHtools · Cypherpunk tool universe</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script>BCH.boot();</script>
 </body>
 </html>

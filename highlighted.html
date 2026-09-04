@@ -2,97 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.svg">
+<meta name="theme-color" content="#06100c">
+<meta name="author" content="alberdioni8406">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@alberdioni8406_">
+<meta name="twitter:creator" content="@alberdioni8406_">
+<meta property="og:site_name" content="BCHtools.cash">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="me" href="https://x.com/alberdioni8406_">
+<link rel="me" href="https://t.me/alberdioni8406">
+<link rel="me" href="https://github.com/alberdioni8406">
+<meta name="twitter:title" content="Highlighted — Look at this. This is worth your time.">
+<meta name="twitter:description" content="Editorial signals from BCHtools — not rankings, not hype.">
+<meta name="twitter:url" content="https://bchtools.cash/highlighted.html">
 <title>Highlighted — BCHtools.cash</title>
-<meta name="description" content="An editorial spotlight on one Bitcoin Cash tool worth your time. Manually chosen, never ranked by hype.">
-<meta property="og:title" content="Highlighted — BCHtools.cash">
-<meta property="og:description" content="Look at this. This is worth your time.">
+<meta name="description" content="Selected projects worth your attention from the independent Bitcoin Cash tool collection.">
+<meta property="og:title" content="Highlighted — Look at this. This is worth your time.">
+<meta property="og:description" content="Editorial signals from BCHtools — not rankings, not hype.">
+<link rel="stylesheet" href="css/main.css">
 <meta property="og:url" content="https://bchtools.cash/highlighted.html">
-<link rel="canonical" href="https://bchtools.cash/highlighted.html">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><span class="dot"></span>BCHtools<span class="term-cursor"></span></a>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="cursor"></span> BCHTOOLS</a>
+    <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html"><span class="nav-num">01</span>Home</a></li>
-        <li><a href="tools.html"><span class="nav-num">02</span>The Tools</a></li>
-        <li><a href="finished.html"><span class="nav-num">03</span>Finished</a></li>
-        <li><a href="lab.html"><span class="nav-num">04</span>In The Lab</a></li>
-        <li><a href="awaiting-signal.html"><span class="nav-num">05</span>Awaiting Signal</a></li>
-        <li><a href="highlighted.html"><span class="nav-num">06</span>Highlighted</a></li>
-        <li><a href="cashrush.html"><span class="nav-num">07</span>CASHRUSH</a></li>
-        <li><a href="fundmetools.html"><span class="nav-num">08</span>Fund Me Tools</a></li>
-        <li><a href="about.html"><span class="nav-num">09</span>About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">The Tools</a></li>
+        <li><a href="finished.html">Finished</a></li>
+        <li><a href="lab.html">In the Lab</a></li>
+        <li><a href="awaiting.html">Awaiting Signal</a></li>
+        <li><a href="cashrush.html">CASHRUSH</a></li>
+        <li><a href="fundmetools.html">Fund Me Tools</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
-      <div class="nav-right">
-        <a href="fundmetools.html" class="nav-cta">Support ↗</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="hero-grid"></div>
-      <div class="wrap">
-        <p class="page-kicker">06 // HIGHLIGHTED</p>
-        <h1>Look at this.<br>This is worth your time.</h1>
-        <p class="lede">The highlighted slot is manually chosen by the builder — not a ranking, not an algorithm, not a paid placement. Just a project worth a closer look right now.</p>
-      </div>
-    </section>
-    <section style="border-top:none; padding-top:0;">
-      <div class="wrap">
-        <div class="highlight-panel">
-          <span class="h-kicker">Currently highlighted</span>
-          <div id="featuredCard"></div>
-        </div>
-        <p class="lede">Want to see everything else? The full archive is in <a href="tools.html" style="color:var(--green-bright);">The Tools</a>, sorted by <a href="finished.html" style="color:var(--green-bright);">Finished</a>, <a href="lab.html" style="color:var(--green-bright);">In The Lab</a>, and <a href="awaiting-signal.html" style="color:var(--green-bright);">Awaiting Signal</a>.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="index.html" class="brand"><span class="dot"></span>BCHtools</a>
-          <p class="footer-note">An independent, community-supported home for Bitcoin Cash tools. Built and maintained by alberdioni8406.</p>
-          <div class="footer-donate">
-            <span class="donate-label">Support address (BCH)</span>
-            <div class="address-row compact">
-              <span class="mono" id="footerAddress"></span>
-              <button class="copy-btn" id="footerCopyBtn">Copy</button>
-            </div>
-          </div>
-        </div>
-        <ul class="footer-links">
-          <li><a href="tools.html">The Tools</a></li>
-          <li><a href="finished.html">Finished</a></li>
-          <li><a href="lab.html">In The Lab</a></li>
-          <li><a href="awaiting-signal.html">Awaiting Signal</a></li>
-          <li><a href="highlighted.html">Highlighted</a></li>
-          <li><a href="cashrush.html">CASHRUSH</a></li>
-          <li><a href="fundmetools.html">Fund Me Tools</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
-          <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X / Twitter</a></li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-note">© <span id="year"></span> BCHtools.cash — built by alberdioni8406. No tracking. No accounts. No deadline on building.</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div id="modalContent"></div>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="fundmetools.html" class="nav-cta">Fund Me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     </div>
   </div>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+</header>
+
+<main>
+  <div class="page-header">
+    <div class="wrap">
+      <div class="page-num">06 // HIGHLIGHTED</div>
+      <h1>Look at this.<br><span class="accent">This is worth your time.</span></h1>
+      <p class="lede">Editorial signals — not rankings, not paid placement, not invented metrics. A small set of projects the collection is pointing at right now.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="project-grid" id="highlightedGrid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">HOW THIS WORKS</p>
+      <div class="signal-block">
+        <p>Selection is manual. Change the list in data.js via HIGHLIGHTED_SLUGS.</p>
+        <p>No fake “top tools.” No engagement farming. Just a clear pointer: try these.</p>
+      </div>
+      <div class="hero-actions mt-24">
+        <a href="tools.html" class="btn btn-ghost">Full collection</a>
+        <a href="fundmetools.html" class="btn btn-primary">Fund Me Tools</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <div class="brand"><span class="cursor"></span> BCHTOOLS.CASH</div>
+      <p class="footer-note">Independent Bitcoin Cash tools. Free to use. Community-supported. No deadlines.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="fundmetools.html">Fund Me</a></li>
+      <li><a href="cashrush.html">CASHRUSH</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="https://x.com/alberdioni8406_" target="_blank" rel="noopener">X</a></li>
+    </ul>
+  </div>
+  <div class="wrap footer-bottom">© <span id="year"></span> BCHtools · Cypherpunk tool universe</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script>
+BCH.boot();
+(function () {
+  const grid = document.getElementById("highlightedGrid");
+  if (!grid) return;
+  const slugs = typeof HIGHLIGHTED_SLUGS !== "undefined" ? HIGHLIGHTED_SLUGS : [FEATURED_SLUG];
+  const list = slugs.map(s => getBySlug(s)).filter(Boolean);
+  if (!list.length) {
+    grid.innerHTML = `<p style="color:var(--ink-faint)">No highlighted projects configured.</p>`;
+    return;
+  }
+  grid.innerHTML = list.map((p, i) => BCH.cardHTML(p, i)).join("");
+  BCH.bindCards(grid);
+})();
+</script>
 </body>
 </html>

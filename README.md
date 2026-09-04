@@ -1,43 +1,56 @@
-# BCHtools.cash
+# BCHtools.cash — Cypherpunk Tool Universe
 
-A community-supported home for independent Bitcoin Cash tools.
+A living collection of independent Bitcoin Cash tools.
 
 Live: **https://bchtools.cash**
 
-## Positioning
+## What this is
 
-These tools are free to use. Keeping them alive isn’t free.
+Not a generic crypto directory. A multi-page experience:
 
-Domains, hosting, APIs, maintenance and development time all cost something. Community support helps keep the collection online, maintained and growing.
+- **Home** — transmission / orientation
+- **The Tools** — full filterable collection
+- **Finished** — ideas that became real
+- **In the Lab** — active experiments
+- **Awaiting Signal** — projects that need a push
+- **Highlighted** — editorial picks
+- **CASHRUSH** — play first, discover the rest later
+- **Fund Me Tools** — ongoing support, no deadline
+- **About** — independent building
 
 ## Architecture
 
-100% static. No framework, no build step, no backend.
+Static HTML + shared CSS/JS. No framework. No backend.
 
 ```
-index.html   — structure
-style.css    — design system
-data.js      — PROJECTS, FUNDRAISER, SUPPORT_FUNDED, FUNDING_STATUS, BUILDER
-app.js       — render, filters, modal, participate, QR, copy
-vercel.json  — deployment
+index.html, tools.html, finished.html, lab.html,
+awaiting.html, highlighted.html, cashrush.html,
+fundmetools.html, about.html
+css/main.css
+js/data.js      — PROJECTS, FUNDRAISER, SUPPORT_FUNDED, FEATURED_SLUG…
+js/common.js    — cards, modal, nav, donations, QR
+vercel.json
 ```
 
 ## Fundraiser
 
-Primary BCH address (do not replace):
+Primary BCH (do not replace):
 
 `bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`
 
-Token-aware address remains available for CashTokens.
+Token-aware address remains available.
 
-## Tools
+Fund Me Tools has **no campaign end date**.
 
-- **Finished** — including Ghostroom (BCH-enabled anonymous chat)
-- **Nearly Finished** — BCHBooks (ready for custom domain + final polish)
-- **Beta / In Development** — remaining tools in the pipeline
+## Data
 
-Status and content live in `data.js`. Rotate the featured tool via `FEATURED_SLUG`.
+Edit `js/data.js` to:
 
-## Local preview
+- Add / update tools
+- Change `FEATURED_SLUG` or `HIGHLIGHTED_SLUGS`
+- Update `SUPPORT_FUNDED` notes
+- Adjust `FUNDING_STATUS.priorities`
 
-Open `index.html` in a browser, or serve the folder with any static server.
+## Deploy
+
+Push to GitHub → Vercel (static). Or open any HTML file locally.
