@@ -34,7 +34,7 @@ vercel.json
 
 ## Fundraiser
 
-Primary BCH (do not replace):
+Primary BCH:
 
 `bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040`
 
