@@ -1,90 +1,74 @@
 /* ============================================================
    BCHTOOLS.CASH — DATA
-   A community-supported home for independent Bitcoin Cash tools.
+   Cypherpunk tool universe for independent Bitcoin Cash software.
    ============================================================ */
 
 const BUILDER = {
   handle: "alberdioni8406",
   name: "alberdioni8406",
-  tagline: "Independent developer · BCH tools for the ecosystem",
+  tagline: "Independent builder · BCH tools & experiments",
   github: "https://github.com/alberdioni8406",
   siteRepo: "https://github.com/alberdioni8406/bchhub",
   x: "https://x.com/alberdioni8406_",
   telegram: "https://t.me/alberdioni8406",
   email: "alberdioni8406@proton.me",
-  about: "BCHtools is independently built and maintained for the Bitcoin Cash ecosystem. The tools are free to use. Keeping them online, maintained and improved requires infrastructure and development time — community support makes that possible."
+  about: "Years of independent building for Bitcoin Cash. Tools, experiments, and infrastructure that stay free to use — kept alive by the people who care that they exist."
 };
 
-/** Primary fundraiser — single destination for the entire BCHtools ecosystem */
 const FUNDRAISER = {
   currency: "BCH",
   address: "bitcoincash:qrtv37u522gz8a5lezfqk5vukly93cu7gc8tn09040",
   tokenAwareAddress: "bitcoincash:zz7pjvq99kylyvns6fjmyawjhxwnucgn2qwyae2ye9",
-  label: "Support BCHtools",
-  note: "Any amount helps. Domains, hosting, APIs and development time are recurring costs."
+  label: "Fund Me Tools",
+  note: "No deadline. The work does not expire."
 };
 
-/** Featured tool — change slug to rotate. Must match a PROJECTS slug. */
+/** Featured / highlighted — change slug to rotate */
 const FEATURED_SLUG = "cauldron-radar";
+const HIGHLIGHTED_SLUGS = ["cauldron-radar", "bchbooks", "cashrush"];
 
-/**
- * Funding progress (optional). Leave amounts null/empty to show priorities only.
- * Never fabricate figures.
- */
 const FUNDING_STATUS = {
-  goalLabel: "Current funding priorities",
-  // When real data exists, set e.g.:
-  // current: 0.42, target: 2.0, currency: "BCH", note: "..."
+  goalLabel: "Community Fuel",
   current: null,
   target: null,
   currency: "BCH",
+  note: "Ongoing support. No campaign end date.",
   priorities: [
-    "Custom domains and renewals",
-    "Hosting so applications stay online",
-    "API / data provider costs when free tiers are insufficient",
-    "Maintenance, bug fixes and security updates",
-    "Moving finished projects from temporary deploys to permanent domains",
-    "Continued development of tools the community uses"
+    "Domains and renewals",
+    "Hosting so tools stay reachable",
+    "API and data costs when free tiers fail",
+    "Bug fixes, security, dependency updates",
+    "Moving finished work onto permanent domains",
+    "Development time for the next experiment"
   ]
 };
 
-/**
- * What community support has funded — only verified entries.
- * Empty array shows an honest empty state.
- */
 const SUPPORT_FUNDED = [
   {
     period: "Aug 2026",
-    amount: null,
-    note: "Community support helped purchase the custom domains bchtools.cash and cauldronradar.cash — keeping the tools hub and Cauldron Radar on proper domains.",
-    tool: null
+    note: "Community support helped purchase the custom domains bchtools.cash and cauldronradar.cash."
   },
   {
     period: "Aug 2026",
-    amount: null,
-    note: "bchtools.cash launched as the community showcase for independent BCH tools.",
-    tool: null
+    note: "bchtools.cash launched as the community showcase for independent BCH tools."
   },
   {
     period: "2026",
-    amount: null,
-    note: "Cauldron Radar (cauldronradar.cash) — live DeFi analytics for the Cauldron AMM, maintained and improved with community feedback.",
-    tool: "cauldron-radar"
+    note: "Cauldron Radar (cauldronradar.cash) — live DeFi analytics for the Cauldron AMM, maintained with community feedback."
   },
   {
     period: "2026",
-    amount: null,
-    note: "CashCompass, Compass Pay, StableShift, BCHnostr.live — finished tools kept public and free to use.",
-    tool: null
+    note: "CashCompass, Compass Pay, StableShift, BCHnostr.live — finished tools kept public and free."
   }
 ];
 
-// Status vocabulary:
-// "finished" | "nearly-finished" | "beta" | "in-development" | "needs-funding" | "archived"
-// Category: "main" | "defi" | "community"
+/*
+  Status vocabulary:
+  finished | nearly-finished | beta | in-development | experimental
+  Category: main | defi | community | games
+*/
 
 const PROJECTS = [
-  // ---------- FINISHED ----------
   {
     name: "CashCompass",
     slug: "cashcompass",
@@ -92,20 +76,18 @@ const PROJECTS = [
     category: "main",
     tags: ["Explorer", "CashTokens", "Community", "Infrastructure"],
     description: "The main hub for the Bitcoin Cash ecosystem — wallets, CashTokens, DeFi, explorers, dev tools and privacy tools in one place.",
-    longDescription: "CashCompass is the flagship ecosystem hub — a curated map of the Bitcoin Cash landscape covering wallets, CashTokens, DeFi, block explorers, developer tools, privacy tools and community profiles. It rotates a featured project weekly and includes an AI chatbot (built for the ecosystem, running on Gemini 2.0 Flash through a Vercel serverless proxy) to help visitors navigate what BCH actually offers.",
-    whyBuilt: "After years of writing about individual BCH tools and projects separately, it became clear there was no single place that mapped the ecosystem as a whole. CashCompass is that map.",
+    longDescription: "CashCompass is the flagship ecosystem hub — a curated map of the Bitcoin Cash landscape covering wallets, CashTokens, DeFi, block explorers, developer tools, privacy tools and community profiles. It rotates a featured project weekly and includes an AI chatbot to help visitors navigate what BCH actually offers.",
+    whyBuilt: "There was no single place that mapped the BCH ecosystem as a whole. CashCompass is that map.",
     features: [
-      "Ecosystem directory across wallets, CashTokens, DeFi, explorers, dev tools, and privacy tools",
-      "Weekly featured-project rotation with countdown",
+      "Ecosystem directory across wallets, CashTokens, DeFi, explorers, dev tools, privacy tools",
+      "Weekly featured-project rotation",
       "Built-in AI chatbot for ecosystem questions",
-      "Spanish-language resources section",
-      "BCH donation QR built in"
+      "Spanish-language resources section"
     ],
-    dataSources: "Curated/maintained directly, not API-driven",
-    whatsNext: "The project's original custom domain (cashcompass.space) is currently unavailable due to a domain-provider issue outside the project's control. The Vercel deployment remains the live, maintained version, and the domain may be restored if the provider situation resolves.",
+    dataSources: "Curated/maintained directly",
+    whatsNext: "Original custom domain temporarily unavailable due to a provider issue. Vercel deployment remains live.",
     liveUrl: "https://cashcompass-bch.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/cashcompass",
-    domainNote: "Originally at cashcompass.space — that custom domain is temporarily unavailable due to a domain-provider issue. The site itself is unaffected and lives at the Vercel URL below.",
     needs: null,
     supportNeeded: null
   },
@@ -116,15 +98,15 @@ const PROJECTS = [
     category: "defi",
     tags: ["DeFi", "Stablecoins"],
     description: "A BCH-to-stablecoin hedging tool covering MUSD (via Moria) and PUSD (via ParyonUSD).",
-    longDescription: "StableShift gives BCH holders a way to hedge exposure into on-chain stablecoins native to Bitcoin Cash. It pulls pricing through a General Protocols hex oracle with a CoinPaprika fallback, so rates stay live even if one source is unavailable.",
-    whyBuilt: "BCH holders who want to reduce volatility exposure without leaving the BCH ecosystem entirely needed a straightforward hedging entry point.",
+    longDescription: "StableShift gives BCH holders a way to hedge exposure into on-chain stablecoins native to Bitcoin Cash. Pricing through General Protocols hex oracle with CoinPaprika fallback.",
+    whyBuilt: "A straightforward hedging entry point without leaving the BCH ecosystem.",
     features: [
       "MUSD (Moria) and PUSD (ParyonUSD) hedging flows",
-      "General Protocols hex oracle pricing with CoinPaprika fallback",
-      "Serverless oracle proxy (api/oracle.js)"
+      "Oracle pricing with fallback",
+      "Serverless oracle proxy"
     ],
-    dataSources: "General Protocols oracle, CoinPaprika fallback",
-    whatsNext: "The MUSD card currently shows an offline warning due to a known bug in the Moria contract, upstream of this project.",
+    dataSources: "General Protocols oracle, CoinPaprika",
+    whatsNext: "MUSD card may show offline due to a known upstream Moria contract issue.",
     liveUrl: "https://www.stableshift.cash/",
     githubUrl: "https://github.com/alberdioni8406/StableShift",
     needs: null,
@@ -137,15 +119,14 @@ const PROJECTS = [
     category: "main",
     tags: ["Payments"],
     description: "A BCH payment app with live fiat conversion across seven currencies and a built-in QR flow.",
-    longDescription: "Compass Pay is a single-file payment tool: enter an amount, get a live BCH-denominated QR code, with fiat conversion across USD, EUR, GBP, MZN, ZAR, NGN and BRL. Pricing runs through Kraken primary / Coinbase fallback for BCH/USD, and open.er-api.com for FX cross-rates, with a hardcoded last-resort fallback so the app never fully breaks.",
-    whyBuilt: "Simple point-of-payment tooling for BCH is often locked behind wallet apps or exchange interfaces. Compass Pay is a lightweight, dedicated alternative that also reflects the West/Southern African currencies (MZN, ZAR, NGN) relevant to the builder's own on-the-ground adoption work.",
+    longDescription: "Enter an amount, get a live BCH-denominated QR. Fiat conversion across USD, EUR, GBP, MZN, ZAR, NGN and BRL. Lightweight and dedicated.",
+    whyBuilt: "Simple point-of-payment tooling without locking users behind heavy wallet or exchange UIs.",
     features: [
       "Live BCH/fiat conversion across 7 currencies",
       "QR panel with clipboard copy",
-      "CashAddr + Base58 address validation",
-      "Serverless price proxy (api/rates.js) via CoinPaprika to resolve CORS issues"
+      "CashAddr + Base58 validation"
     ],
-    dataSources: "Kraken (primary), Coinbase (fallback), CoinPaprika (via proxy), open.er-api.com (FX)",
+    dataSources: "Kraken, Coinbase, CoinPaprika, open.er-api.com",
     whatsNext: null,
     liveUrl: "https://www.compasspay.cash/",
     githubUrl: "https://github.com/alberdioni8406/compass-pay",
@@ -158,19 +139,17 @@ const PROJECTS = [
     status: "finished",
     category: "defi",
     tags: ["DeFi", "CashTokens", "Cauldron", "Analytics"],
-    description: "A live DeFi analytics dashboard for the Cauldron AMM and CashToken markets on Bitcoin Cash — tracking 340+ tokens with real data, no mocks.",
-    longDescription: "Cauldron Radar is built directly on the official Riften Labs Cauldron indexer (no mock or fabricated data at any point). It gives the CashToken DeFi ecosystem a dashboard: overview stats (TVL, volume, pools, tokens tracked), a searchable token explorer with price history, a liquidity pool explorer with rankings, a live activity feed, and a localStorage-backed watchlist.",
-    whyBuilt: "As CashToken DeFi activity on Cauldron grew, there was no dedicated analytics layer for it — this fills that gap as a module of the wider BCH Lab DeFi Explorer.",
+    description: "Live DeFi analytics for the Cauldron AMM and CashToken markets — real data, no mocks.",
+    longDescription: "Built directly on the Riften Labs Cauldron indexer. Dashboard overview, searchable token explorer, liquidity pool rankings, live activity feed, and watchlist.",
+    whyBuilt: "CashToken DeFi on Cauldron needed a dedicated analytics layer.",
     features: [
-      "Dashboard overview: TVL, volume, pools, tokens tracked",
-      "Token explorer with search, sort, and per-token detail pages with price charts",
-      "Liquidity pool explorer with rankings",
-      "Live activity feed",
-      "Watchlist (localStorage) and CSV export",
-      "API status indicator with live refresh"
+      "TVL, volume, pools, tokens tracked",
+      "Token explorer with price history",
+      "Liquidity pool rankings",
+      "Live activity feed and watchlist"
     ],
-    dataSources: "Riften Labs Cauldron indexer (indexer.riften.net/cauldron)",
-    whatsNext: "Planned: multi-period volume (7d/30d/monthly), an APY leaderboard, a new-pools/token-launch tracker, whale LP and liquidity-concentration indicators, historical TVL charting, and unusual-volume detection.",
+    dataSources: "Riften Labs Cauldron indexer",
+    whatsNext: "Planned: multi-period volume, APY leaderboard, new-pools tracker, historical TVL.",
     liveUrl: "https://www.cauldronradar.cash/#/dashboard",
     githubUrl: "https://github.com/alberdioni8406/cauldron-radar",
     needs: null,
@@ -182,17 +161,15 @@ const PROJECTS = [
     status: "finished",
     category: "main",
     tags: ["Nostr", "Community", "Analytics"],
-    description: "A live monitoring dashboard for the BCHnostr relay — stats, note feed, leaderboards and charts for the BCH community on Nostr.",
-    longDescription: "BCHnostr.live watches the BCHnostr Nostr relay (wss://relay.bchnostr.com) in real time: live stats, a note feed, and community leaderboards (Most Active Users, Top Reactions, Most Mentioned). It runs on a shared, multiplexed relay connection to stay efficient, and includes a sponsor-banner section to help fund its own upkeep.",
-    whyBuilt: "Started as a community leaderboard pairing Nostr relay activity with on-chain donor data, then was redesigned to focus entirely on relay health and activity once that turned out to be the more useful core.",
+    description: "Live monitoring for the BCHnostr relay — stats, note feed, leaderboards and charts.",
+    longDescription: "Watches the BCHnostr Nostr relay in real time: live stats, note feed, community leaderboards. Shared multiplexed connection architecture.",
+    whyBuilt: "Relay health and community activity needed a focused dashboard.",
     features: [
-      "Live relay stats and real-time note feed",
-      "Community leaderboards: Most Active Users, Top Reactions, Most Mentioned",
-      "Shared multiplexed relay connection architecture",
-      "Sponsor banner placements to help fund development",
-      "A companion autonomous posting bot (nostr-tools v2, rotating content bank, daily cron)"
+      "Live relay stats and note feed",
+      "Leaderboards: Most Active, Top Reactions, Most Mentioned",
+      "Sponsor banner placements"
     ],
-    dataSources: "BCHnostr relay (wss://relay.bchnostr.com), Haskoin (for donor data in an earlier iteration)",
+    dataSources: "BCHnostr relay (wss://relay.bchnostr.com)",
     whatsNext: null,
     liveUrl: "https://www.bchnostr.live/",
     githubUrl: "https://github.com/alberdioni8406/BCHnostrpulse",
@@ -206,8 +183,8 @@ const PROJECTS = [
     category: "community",
     tags: ["Chat", "Privacy", "BCH Community"],
     description: "Anonymous disposable chat with a dedicated Bitcoin Cash community room and BCH-oriented communication features.",
-    longDescription: "Ghostroom is an anonymous/disposable chat project. It is not a Bitcoin Cash-only application, but it provides a dedicated Bitcoin Cash room and BCH-oriented communication use cases for the community. It is included here because of that BCH-enabled relationship — not because the product itself is a BCH protocol tool.",
-    whyBuilt: "Anonymous, ephemeral communication with a clear BCH community presence.",
+    longDescription: "Ghostroom is not a Bitcoin Cash-only application. It is an anonymous/disposable chat project that also provides a dedicated BCH room and BCH-oriented use cases. Included for that relationship — not as a pure protocol tool.",
+    whyBuilt: "Anonymous ephemeral communication with a clear BCH community presence.",
     features: [
       "Anonymous disposable rooms",
       "Dedicated Bitcoin Cash community room",
@@ -216,81 +193,77 @@ const PROJECTS = [
     dataSources: null,
     whatsNext: null,
     liveUrl: "https://ghostroom.xyz",
-    githubUrl: "https://github.com/alberdioni8406/ghostroom",
+    githubUrl: null,
     needs: null,
     supportNeeded: null,
     bchLabel: "BCH-enabled"
   },
-
-  // ---------- NEARLY FINISHED / READY FOR LAUNCH ----------
   {
     name: "BCHBooks",
     slug: "bchbooks",
     status: "nearly-finished",
     category: "main",
-    tags: ["Accounting", "Ledger", "CashTokens"],
-    description: "Bitcoin Cash accounting ledger that turns a BCH address into an organized accounting view.",
-    longDescription: "BCHBooks is a functional Bitcoin Cash accounting ledger. It is already usable; what remains is a custom domain and final polish before a permanent production launch.",
-    whyBuilt: "Turning raw BCH address activity into a clear, organized accounting view for holders and builders.",
+    tags: ["Accounting", "Ledger"],
+    description: "Bitcoin Cash accounting ledger that turns a BCH address into an organized accounting view. Live and usable — needs custom domain + final polish.",
+    longDescription: "BCHBooks is already functional on Vercel. It turns a BCH address into an organized accounting view. What remains before a permanent production launch is a custom domain, final polish, and community support to keep it maintained.",
+    whyBuilt: "Turn raw address activity into a clear accounting view for holders and builders.",
     features: [
       "Address-based accounting view",
       "Organized ledger presentation",
-      "Functional core already live"
+      "Functional core already live at bchbooks.vercel.app"
     ],
     dataSources: null,
-    whatsNext: "Custom domain + final polish. Ready for permanent launch.",
+    whatsNext: "Custom domain + final polish. Community support helps move it from temporary deploy to permanent home.",
     liveUrl: "https://bchbooks.vercel.app",
-    githubUrl: "https://github.com/alberdioni8406/bchbooks",
-    needs: "Custom domain + final polish",
-    supportNeeded: ["funding"]
+    githubUrl: null,
+    needs: "Custom domain + final polish + community support",
+    supportNeeded: ["funding", "feedback"]
   },
-
-  // ---------- BETA / IN DEVELOPMENT ----------
+  {
+    name: "CASHRUSH",
+    slug: "cashrush",
+    status: "nearly-finished",
+    category: "games",
+    tags: ["Game", "Browser", "Discoverability", "Onboarding"],
+    description: "A fast browser game — already playable. Play first. Discover the rest later. Needs custom domain, polish, feedback, and community love.",
+    longDescription: "CASHRUSH is live and playable at cashrush-play.vercel.app. It is a fast browser game inspired by simple games people can play instantly — no accounts, no complicated onboarding, no long instructions. Players chase scores, unlock achievements, and return to beat previous runs. Somewhere between the obstacles and progression, they may begin discovering a world connected to Bitcoin Cash. No classroom. No forced lesson. The game comes first. Curiosity comes naturally. What it still needs: a custom domain, more polish, player feedback, and community support so it can become a strong, gentle onboarding path into the ecosystem — and more.",
+    whyBuilt: "Simple games become daily habits. Bitcoin Cash can live inside a world people already want to return to — without interrupting the fun to lecture. CASHRUSH aims to be that kind of onboarding tool: play first, discover later.",
+    features: [
+      "Already playable in the browser",
+      "Instant play, no account required",
+      "Score chasing and achievement system",
+      "Subtle connection to Bitcoin Cash inside the world",
+      "Future potential for optional BCH / CashToken integrations"
+    ],
+    dataSources: null,
+    whatsNext: "Custom domain, polish, feedback, and community support. Gameplay is live; optional BCH integrations remain future work.",
+    liveUrl: "https://cashrush-play.vercel.app",
+    githubUrl: null,
+    needs: "Custom domain + polish + feedback + community support",
+    supportNeeded: ["funding", "feedback", "users"],
+    special: "cashrush"
+  },
   {
     name: "Bitcoin Cash Network Radar",
     slug: "bch-net-radar",
     status: "beta",
     category: "main",
-    tags: ["Network", "Analytics", "CashTokens"],
-    description: "A multi-provider BCH network observatory — block production, mempool, mining, difficulty/hashrate and a profitability calculator, with no single point of failure.",
-    longDescription: "BCH Radar aggregates real-time network data (block height, difficulty, estimated hashrate, mempool, recent blocks and charts, market data, address lookup) from multiple independent providers with automatic fallback chains — Haskoin (original + mirror), Blockchair, 3xpl, Paytaca BCMR for CashTokens, and CoinPaprika/CoinGecko for pricing. If a metric can't be retrieved from any provider, the UI shows it as unavailable rather than fabricating a number.",
-    whyBuilt: "Existing BCH explorers tend to depend on a single backend. This is built specifically so that no single provider going down takes the dashboard with it.",
+    tags: ["Network", "Analytics"],
+    description: "Multi-provider BCH network observatory — no single point of failure.",
+    longDescription: "Aggregates real-time network data from multiple independent providers with automatic fallback. If a metric cannot be retrieved, the UI shows it unavailable rather than fabricating a number.",
+    whyBuilt: "Existing explorers often depend on a single backend. This is built so one provider going down does not take the dashboard with it.",
     features: [
-      "Network stats: block height, difficulty, estimated hashrate, mempool",
-      "Recent blocks with charts (block interval, tx/block, block size)",
-      "Market data with cross-source checks",
-      "Read-only address lookup",
-      "Provider health monitoring and cross-source consensus verification",
-      "12 Vercel serverless API routes, zero required API keys for core functionality"
+      "Block height, difficulty, hashrate, mempool",
+      "Recent blocks with charts",
+      "Provider health monitoring",
+      "Zero required API keys for core functionality"
     ],
-    dataSources: "Haskoin (original + mirror), Blockchair, 3xpl, Paytaca BCMR, CoinPaprika, CoinGecko",
-    whatsNext: "Publicly documented as an early public beta. Still planned: mining-pool distribution (needs coinbase-tag parsing infrastructure), a fuller CashTokens activity feed beyond BCMR metadata, longer historical time series, and general polish.",
+    dataSources: "Haskoin, Blockchair, 3xpl, Paytaca BCMR, CoinPaprika, CoinGecko",
+    whatsNext: "Early public beta. Planned: mining-pool distribution, fuller CashTokens activity, longer history.",
     liveUrl: "https://bch-net-radar.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/bch-net-radar",
     needs: null,
     supportNeeded: ["users", "feedback"]
-  },
-  {
-    name: "CASHRUSH",
-    slug: "cashrush",
-    status: "beta",
-    category: "main",
-    tags: ["Games", "Community"],
-    description: "A fast, no-account browser game built for replayable runs — with a Bitcoin Cash world woven quietly into it.",
-    longDescription: "CASHRUSH is a browser game built around the same instinct as the simple games people play instantly, without accounts or onboarding: chase a score, beat your last run, come back for one more. An achievement system rewards returning, and somewhere between the obstacles and unlocks, a world connected to Bitcoin Cash starts showing up. Gameplay comes first — there's no forced lesson or interruption.",
-    whyBuilt: "To let people discover Bitcoin Cash through curiosity rather than a classroom — the game has to work as a game first.",
-    features: [
-      "Instant start, no accounts",
-      "Score-chasing runs built for replayability",
-      "An achievement system that rewards coming back",
-      "A Bitcoin Cash world woven into the game rather than bolted on"
-    ],
-    dataSources: null,
-    whatsNext: "Live and playable now on a temporary Vercel domain. Still needed: a custom domain, community feedback and playtesting, and continued balancing and polish. Optional BCH and CashToken integrations are a future possibility once the core game is solid — not a current feature.",
-    liveUrl: "https://cashrush-play.vercel.app",
-    githubUrl: "https://github.com/alberdioni8406/cashrush-play",
-    needs: "Custom domain, feedback, and continued development",
-    supportNeeded: ["funding", "feedback", "users"]
   },
   {
     name: "BCH Lab",
@@ -298,16 +271,16 @@ const PROJECTS = [
     status: "in-development",
     category: "main",
     tags: ["Community", "Infrastructure"],
-    description: "A personal open-source dev lab for BCH — a showcase of finished tools, in-production tools, and experimental ideas the community can help prioritize.",
-    longDescription: "BCH Lab is the organizing layer above the individual tools: a pipeline view (Idea → Prototype → Community Testing → Full Launch) and a lightweight voting mechanism so the community can weigh in on what should get built further versus what isn't a priority.",
-    whyBuilt: "Once there were enough individual BCH tools in flight, they needed a shared home that showed the whole pipeline, not just finished output.",
+    description: "Open-source dev lab for BCH — pipeline view of finished, in-production, and experimental ideas.",
+    longDescription: "Organizing layer above individual tools: Idea → Prototype → Community Testing → Full Launch, with lightweight community voting.",
+    whyBuilt: "Enough tools in flight needed a shared home that showed the whole pipeline.",
     features: [
-      "Directory of finished, in-production, and experimental projects",
-      "Idea → Prototype → Community Testing → Full Launch pipeline view",
-      "Community voting (Build Further / Not Priority) — currently demo-level, using localStorage"
+      "Directory of finished, in-production, experimental projects",
+      "Pipeline view",
+      "Community voting (currently localStorage demo)"
     ],
-    dataSources: "Curated/maintained directly",
-    whatsNext: "Needs a real (non-localStorage) voting backend, and continued curation as new tools launch.",
+    dataSources: "Curated",
+    whatsNext: "Real voting backend and continued curation.",
     liveUrl: "https://bch-lab.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/bch-lab",
     needs: null,
@@ -319,17 +292,16 @@ const PROJECTS = [
     status: "in-development",
     category: "main",
     tags: ["Infrastructure", "Analytics"],
-    description: "A status-page-style monitoring dashboard tracking uptime and health across 25 BCH services in seven categories.",
-    longDescription: "BCH Ecosystem Radar treats BCH infrastructure the way a status page treats cloud services: live fetch probes (with simulated-monitoring fallback where a live probe isn't feasible), historical charts, and a detail modal per service, across seven service categories.",
-    whyBuilt: "BCH infrastructure — explorers, APIs, relays, wallets — has no shared uptime picture. This is a first attempt at one.",
+    description: "Status-page-style monitoring across 25 BCH services in seven categories.",
+    longDescription: "Live fetch probes with fallback where needed, historical charts, per-service detail.",
+    whyBuilt: "BCH infrastructure had no shared uptime picture.",
     features: [
       "25 tracked services across 7 categories",
-      "Live fetch probes with fallback simulated monitoring where needed",
-      "Chart.js history charts",
-      "Per-service detail modal"
+      "Live probes with simulated fallback where needed",
+      "History charts and detail modals"
     ],
-    dataSources: "Live probes against each tracked service, with fallback simulated monitoring",
-    whatsNext: "Needs broader service coverage and replacing remaining simulated-monitoring fallbacks with live probes where feasible.",
+    dataSources: "Live probes + fallback",
+    whatsNext: "Broader coverage; replace remaining simulated probes.",
     liveUrl: "https://bch-ecosystem-radar.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/BCH-ecosystem-radar",
     needs: null,
@@ -341,16 +313,16 @@ const PROJECTS = [
     status: "in-development",
     category: "main",
     tags: ["Explorer", "Network"],
-    description: "A BCH mempool visualizer built as a single HTML file on top of the Haskoin Store API.",
-    longDescription: "Compass MEM gives a live view into the BCH mempool and recent blocks, pulling transaction IDs and batch transaction detail directly from Haskoin Store.",
-    whyBuilt: "A lightweight, dependency-free way to watch mempool and recent-block activity without a full block explorer's overhead.",
+    description: "BCH mempool visualizer as a single HTML file on Haskoin Store API.",
+    longDescription: "Live mempool and recent blocks without full explorer overhead.",
+    whyBuilt: "Lightweight way to watch mempool and recent-block activity.",
     features: [
-      "Live mempool transaction view",
-      "Recent block browsing (height-based, avoiding hash-walking)",
-      "Batch transaction detail fetching"
+      "Live mempool view",
+      "Recent block browsing",
+      "Batch transaction detail"
     ],
     dataSources: "Haskoin Store API",
-    whatsNext: "Needs continued maintenance as the Haskoin Store API evolves, and community feedback on which additional views would be useful.",
+    whatsNext: "Maintenance as API evolves; feedback on useful views.",
     liveUrl: "https://compass-mem.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/compassmem",
     needs: null,
@@ -362,16 +334,16 @@ const PROJECTS = [
     status: "in-development",
     category: "main",
     tags: ["Analytics", "Network"],
-    description: "A BCH whale-monitoring dashboard tracking large on-chain movements, built on Haskoin and CoinPaprika.",
-    longDescription: "Compass Whale scans blocks (via Haskoin's best-block and hash-walk endpoints, batched through the transactions endpoint) looking for large BCH movements, with a dedicated visual language for whale alerts. Its known-address watchlist ships intentionally empty rather than pre-filled with unverified data.",
-    whyBuilt: "Large BCH transactions are visible on-chain but not easy to notice without dedicated tooling — this surfaces them.",
+    description: "Whale-monitoring dashboard for large on-chain BCH movements.",
+    longDescription: "Scans blocks for large movements. Known-address list ships empty rather than pre-filled with unverified data.",
+    whyBuilt: "Large transactions are visible on-chain but hard to notice without dedicated tooling.",
     features: [
       "Block-scanning whale detection",
-      "Animated alert UI for large movements",
-      "Empty-by-default known-address list (no fabricated whale data)"
+      "Alert UI for large movements",
+      "Empty-by-default known-address list"
     ],
-    dataSources: "Haskoin (block/transaction data), CoinPaprika (pricing)",
-    whatsNext: "Needs a populated, verified known-address list and continued monitoring-accuracy work.",
+    dataSources: "Haskoin, CoinPaprika",
+    whatsNext: "Verified known-address list and monitoring accuracy.",
     liveUrl: "https://compass-whale.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/compass-whale",
     needs: null,
@@ -383,18 +355,16 @@ const PROJECTS = [
     status: "in-development",
     category: "main",
     tags: ["CashTokens", "Explorer"],
-    description: "A CashTokens directory and ledger, sourced live from TokenStork and Paytaca BCMR, with no backend database of its own.",
-    longDescription: "CashTokens Ledger is a searchable, sortable, filterable directory of CashTokens: header stats (tracked count, burned count, new tokens in 24h/7d, indexed block height), a token detail panel (top holders, NFT instances, history chart, explorer links), and hot/leaderboard views by holders and UTXOs. TokenStork is the source of truth for token data; Paytaca BCMR enriches it with metadata. Both are proxied through Vercel serverless functions since neither sends CORS headers for direct browser access.",
-    whyBuilt: "CashTokens needed a dedicated, UTXO-aware directory that reflects how tokens actually work on Bitcoin Cash, distinct from a generic token-price tracker.",
+    description: "CashTokens directory and ledger from TokenStork and Paytaca BCMR — no backend database of its own.",
+    longDescription: "Searchable, sortable directory with token detail, holders, NFT instances, leaderboards. Proxied through serverless functions for CORS.",
+    whyBuilt: "CashTokens needed a UTXO-aware directory distinct from generic price trackers.",
     features: [
-      "Sortable/searchable/filterable token table with pagination",
-      "Token detail panel: top holders, NFT instances, history chart",
-      "Recently-updated and top-by-holders/top-by-UTXOs leaderboards",
-      "Aggressive client-side caching for instant cached-then-refresh loading",
-      "Server-side icon proxy that blocks private/local network addresses for safety"
+      "Sortable/filterable token table",
+      "Token detail: holders, NFTs, history",
+      "Leaderboards by holders and UTXOs"
     ],
-    dataSources: "TokenStork API, Paytaca BCMR",
-    whatsNext: "Continued hardening of the CORS-proxy layer and expansion of token coverage.",
+    dataSources: "TokenStork, Paytaca BCMR",
+    whatsNext: "Proxy hardening and token coverage expansion.",
     liveUrl: "https://cash-tokens-ledger.vercel.app/",
     githubUrl: "https://github.com/alberdioni8406/cash-tokens-ledger",
     needs: null,
@@ -406,18 +376,16 @@ const PROJECTS = [
     status: "in-development",
     category: "main",
     tags: ["CashTokens", "Explorer", "Community"],
-    description: "A CashTokens explorer and ecosystem atlas — built to explain CashTokens' real-world use cases without requiring blockchain expertise.",
-    longDescription: "This is the educational counterpart to CashTokens Ledger: a hero dashboard, a token explorer, a trending-tokens section, and a real-world-use-case section, deliberately designed to avoid reading like a speculative trading or meme-coin platform. It includes a curated example token atlas (illustrative) alongside real BCH API data through Vercel serverless functions proxying Chaingraph, mainnet.cash, Haskoin, and CoinPaprika, plus BCH WalletConnect (wc2-bch-bcr) integration points for wallets like Cashonize, Paytaca and Zapit.",
-    whyBuilt: "CashTokens are powerful but unfamiliar to most people outside BCH development circles — this exists to make the concept and its real-world uses approachable.",
+    description: "CashTokens explorer and ecosystem atlas — real-world use cases without requiring blockchain expertise.",
+    longDescription: "Educational counterpart to the Ledger: hero dashboard, token explorer, trending section, real-world use cases (loyalty, collectibles, tickets, membership). Avoids reading like a speculative trading platform.",
+    whyBuilt: "CashTokens are powerful but unfamiliar outside development circles.",
     features: [
-      "Hero dashboard with stat cards",
-      "Token explorer with search/filter and a token detail page",
-      "Trending tokens section",
-      "Real-world use-case section: loyalty, collectibles, event tickets, membership, community rewards",
-      "WalletConnect (wc2-bch-bcr) integration points"
+      "Hero dashboard and token explorer",
+      "Real-world use-case section",
+      "WalletConnect integration points"
     ],
-    dataSources: "Chaingraph, mainnet.cash, Haskoin, CoinPaprika (via serverless proxy)",
-    whatsNext: "API routes need configuration fixes (a prior Vercel root-directory/package.json issue affected live data), and the curated example atlas is intentionally illustrative rather than exhaustive.",
+    dataSources: "Chaingraph, mainnet.cash, Haskoin, CoinPaprika",
+    whatsNext: "API route configuration fixes; curated atlas remains illustrative.",
     liveUrl: "https://cash-tokens.vercel.app/#/",
     githubUrl: "https://github.com/alberdioni8406/CashCompass-Tokens",
     needs: null,
@@ -426,18 +394,18 @@ const PROJECTS = [
 ];
 
 const STATUS_LABELS = {
-  finished: "Finished",
-  "nearly-finished": "Nearly Finished",
-  beta: "Beta",
-  "in-development": "In Development",
-  "needs-funding": "Needs Funding",
-  archived: "Archived"
+  finished: "FINISHED",
+  "nearly-finished": "NEARLY FINISHED",
+  beta: "BETA",
+  "in-development": "IN THE LAB",
+  experimental: "EXPERIMENTAL"
 };
 
 const CATEGORY_LABELS = {
   main: "Wider Ecosystem",
   defi: "BCH DeFi",
-  community: "BCH Community"
+  community: "BCH Community",
+  games: "Games"
 };
 
 const SUPPORT_LABELS = {
@@ -445,3 +413,25 @@ const SUPPORT_LABELS = {
   funding: "Needs funding",
   users: "Needs users"
 };
+
+function getFinished() {
+  return PROJECTS.filter(p => p.status === "finished");
+}
+function getLab() {
+  return PROJECTS.filter(p =>
+    p.status === "beta" || p.status === "in-development" || p.status === "experimental" || p.status === "nearly-finished"
+  );
+}
+function getInProgress() {
+  return getLab();
+}
+function getAwaiting() {
+  return PROJECTS.filter(p =>
+    p.status === "nearly-finished" ||
+    (p.supportNeeded && p.supportNeeded.length) ||
+    p.needs
+  );
+}
+function getBySlug(slug) {
+  return PROJECTS.find(p => p.slug === slug);
+}
