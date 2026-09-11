@@ -199,6 +199,30 @@ const PROJECTS = [
     bchLabel: "BCH-enabled"
   },
   {
+    name: "TipMeBitcoin",
+    slug: "tipmebitcoin",
+    status: "finished",
+    category: "main",
+    tags: ["Payments", "Tipping", "Identity", "CashTokens"],
+    description: "Non-custodial Bitcoin Cash tipping identity. Claim a handle, prove your address, receive BCH and CashToken tips — no email, no password, no custody.",
+    longDescription: "TipMeBitcoin lets anyone create a public BCH tipping identity at tipmebitcoin.cash/yourname. Claim a short handle by proving control of your BCH address with a signed message. Receive tips as BCH or CashTokens. No email. No password. No custody. Private keys never leave the wallet. Supports WalletConnect (Cashonize, Paytaca, Selene) and manual signing fallback.",
+    whyBuilt: "People need simple, verifiable tip links without giving up keys or creating accounts.",
+    features: [
+      "Public handle identity: tipmebitcoin.cash/yourname",
+      "Cryptographic claim via BCH message signature",
+      "WalletConnect and manual signing support",
+      "CashTokens token-aware addresses",
+      "Built-in QR codes for BCH and CashToken tips",
+      "Fully non-custodial"
+    ],
+    dataSources: null,
+    whatsNext: null,
+    liveUrl: "https://tipmebitcoin.cash",
+    githubUrl: "https://github.com/alberdioni8406/tipmebitcoin",
+    needs: null,
+    supportNeeded: null
+  },
+  {
     name: "BCHBooks",
     slug: "bchbooks",
     status: "nearly-finished",
