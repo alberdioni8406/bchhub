@@ -223,6 +223,29 @@ const PROJECTS = [
     supportNeeded: null
   },
   {
+    name: "CashRaise",
+    slug: "cashraise",
+    status: "finished",
+    category: "main",
+    tags: ["Fundraising", "Payments", "Community", "Non-custodial"],
+    description: "Non-custodial Bitcoin Cash fundraising board. List an idea, pay a small on-chain fee, and receive donations straight to your address — no accounts, no custody, no platform cut.",
+    longDescription: "CashRaise is a simple peer-to-peer fundraising board for Bitcoin Cash. Creators list ideas by paying a small on-chain listing fee to the platform address. Donations go directly to the creator's BCH address. The platform never holds funds. No accounts required. Built so people can surface ideas and get support without traditional intermediaries.",
+    whyBuilt: "Crypto funding should not look or act like a bank. People need a simple, open board to list ideas and receive BCH support peer-to-peer.",
+    features: [
+      "List campaigns with on-chain listing fee verification",
+      "Donations go straight to the creator address",
+      "No accounts, no custody, no cut on donations",
+      "Public BCH explorer verification for listing payments",
+      "Open ideas board with live raised totals from on-chain sums"
+    ],
+    dataSources: "Public BCH explorer (bchexplorer.cash) for fee verification",
+    whatsNext: null,
+    liveUrl: "https://www.cashraise.online/",
+    githubUrl: "https://github.com/alberdioni8406/cashraise",
+    needs: null,
+    supportNeeded: null
+  },
+  {
     name: "BCHBooks",
     slug: "bchbooks",
     status: "nearly-finished",
