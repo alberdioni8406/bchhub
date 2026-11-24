@@ -18,12 +18,12 @@
 <link rel="me" href="https://t.me/alberdioni8406">
 <link rel="me" href="https://github.com/alberdioni8406">
 <meta name="twitter:title" content="BCHtools.cash — Tools don't just get built. They get maintained.">
-<meta name="twitter:description" content="A cypherpunk corner of the Bitcoin Cash internet. Discover finished tools, experiments in the lab, and Fund Me Tools — ongoing support with no expiration.">
+<meta name="twitter:description" content="A cypherpunk corner of the Bitcoin Cash internet. Discover finished tools, experiments in the lab, and 2027 monthly campaign on CashRaise — transparent, sustainable support.">
 <meta name="twitter:url" content="https://bchtools.cash/">
 <title>BCHtools.cash — Cypherpunk tool universe for Bitcoin Cash</title>
 <meta name="description" content="Independent Bitcoin Cash tools. Finished. In the lab. Awaiting signal. A living collection kept alive by the community. No deadlines. Just building.">
 <meta property="og:title" content="BCHtools.cash — Tools don't just get built. They get maintained.">
-<meta property="og:description" content="A cypherpunk corner of the Bitcoin Cash internet. Discover finished tools, experiments in the lab, and Fund Me Tools — ongoing support with no expiration.">
+<meta property="og:description" content="A cypherpunk corner of the Bitcoin Cash internet. Discover finished tools, experiments in the lab, and 2027 monthly campaign on CashRaise — transparent, sustainable support.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bchtools.cash/">
 <link rel="stylesheet" href="css/main.css">
@@ -52,12 +52,12 @@
         <li><a href="lab.html">In the Lab</a></li>
         <li><a href="awaiting.html">Awaiting Signal</a></li>
         <li><a href="cashrush.html">CASHRUSH</a></li>
-        <li><a href="fundmetools.html">Fund Me Tools</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="campaign.html">2027 Campaign</a></li>
+<li><a href="about.html">About</a></li>
       </ul>
     </nav>
     <div style="display:flex;align-items:center;gap:10px;">
-      <a href="fundmetools.html" class="nav-cta">Fund Me</a>
+      <a href="campaign.html" class="nav-cta">2027 Campaign</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     </div>
   </div>
@@ -76,13 +76,13 @@
       <p class="lede">A living collection of independent Bitcoin Cash tools, experiments, and infrastructure. Free to use. Kept alive by people who want them to exist.</p>
       <div class="hero-actions">
         <a href="tools.html" class="btn btn-primary">Explore the universe</a>
-        <a href="fundmetools.html" class="btn btn-ghost">Fund Me Tools</a>
+        <a href="campaign.html" class="btn btn-ghost">2027 Campaign</a>
         <a href="cashrush.html" class="btn btn-amber">CASHRUSH</a>
       </div>
       <div class="stat-strip">
         <div class="stat-cell"><div class="num" id="statTotal">—</div><div class="label">tools</div></div>
         <div class="stat-cell"><div class="num" id="statFinished">—</div><div class="label">finished</div></div>
-        <div class="stat-cell"><div class="num" id="statLab">—</div><div class="label">in progress</div></div>
+        <div class="stat-cell"><div class="num" id="statLab">—</div><div class="label">unfinished</div></div>
         <div class="stat-cell"><div class="num">OPEN</div><div class="label">fund channel</div></div>
       </div>
     </div>
@@ -90,15 +90,44 @@
 
   <section>
     <div class="wrap">
-      <p class="eyebrow">THE SIGNAL</p>
-      <h2>The ecosystem is made of people building things</h2>
-      <div class="signal-block">
-        <p>Some projects are finished. You can use them today.</p>
-        <p>Some are still becoming something. You are looking inside the lab.</p>
-        <p>Some need one final push — a domain, polish, or a few more hours of work.</p>
-        <p>Some simply need people to discover them.</p>
+      <p class="eyebrow">THE PIPELINE</p>
+      <h2>Where every tool sits</h2>
+      <p class="lede">Clear stages so you can find what is ready, what is still being built, and what needs support.</p>
+      <div class="pipeline-stages" id="pipelineStages">
+        <a href="finished.html" class="stage-pill stage-done">
+          <span class="stage-check">✓</span> Finished
+          <span class="stage-count" id="countFinished">—</span>
+        </a>
+        <a href="lab.html" class="stage-pill">
+          Unfinished
+          <span class="stage-count" id="countLab">—</span>
+        </a>
+        <a href="awaiting.html" class="stage-pill">
+          Awaiting Signal
+          <span class="stage-count" id="countAwaiting">—</span>
+        </a>
+        <a href="tools.html" class="stage-pill">
+          All tools
+          <span class="stage-count" id="countAll">—</span>
+        </a>
       </div>
-      <p class="lede">BCHtools.cash is not a directory of dead links. It is a window into what is alive, what is almost ready, and what is still being tested.</p>
+      <div class="status-cards">
+        <a href="finished.html" class="status-card">
+          <div class="status-card-label">FINISHED</div>
+          <div class="status-card-value" id="cardFinished">—</div>
+          <p>Live and usable today. Finished does not mean abandoned.</p>
+        </a>
+        <a href="lab.html" class="status-card">
+          <div class="status-card-label">UNFINISHED</div>
+          <div class="status-card-value" id="cardLab">—</div>
+          <p>In the lab, nearly finished, or still being built — not failures.</p>
+        </a>
+        <a href="awaiting.html" class="status-card">
+          <div class="status-card-label">AWAITING SIGNAL</div>
+          <div class="status-card-value" id="cardAwaiting">—</div>
+          <p>Need domain, polish, feedback, or community fuel.</p>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -112,7 +141,7 @@
 
   <section>
     <div class="wrap">
-      <p class="eyebrow">EXPLORE THE UNIVERSE</p>
+      <p class="eyebrow">EXPLORE</p>
       <h2>Choose a path</h2>
       <div class="path-grid">
         <a href="finished.html" class="path-card">
@@ -135,10 +164,10 @@
           <h3>Just one more run</h3>
           <p>Play first. Discover the rest later.</p>
         </a>
-        <a href="fundmetools.html" class="path-card">
-          <div class="path-id">05 // FUND ME TOOLS</div>
-          <h3>No deadline</h3>
-          <p>Support is always open. Maintenance never stops.</p>
+        <a href="campaign.html" class="path-card">
+          <div class="path-id">05 // 2027 CAMPAIGN</div>
+          <h3>Monthly support</h3>
+          <p>Read the plan here. Contribute on CashRaise.</p>
         </a>
         <a href="tools.html" class="path-card">
           <div class="path-id">06 // ALL TOOLS</div>
@@ -149,14 +178,44 @@
     </div>
   </section>
 
+  <section id="campaign2027" class="campaign-section">
+    <div class="wrap">
+      <p class="eyebrow">2027 SUSTAINABILITY</p>
+      <h2>BCHTools 2027 — monthly support, clear plan</h2>
+      <p class="lede">Instead of one large yearly ask, BCHTools is funded month by month on CashRaise. First campaign prepares January 2027.</p>
+
+      <div class="campaign-grid">
+        <div class="campaign-card campaign-primary">
+          <div class="campaign-badge">ACTIVE CAMPAIGN</div>
+          <h3>Let's Prepare For January</h3>
+          <p>First monthly sustainability campaign. Target covers January operations and the Data Gateway milestone.</p>
+          <div class="campaign-meta">
+            <div><span class="meta-label">January target</span><strong>$1,854</strong></div>
+            <div><span class="meta-label">Annual plan</span><strong>$18,000</strong></div>
+          </div>
+          <div class="hero-actions" style="margin-top:18px;">
+            <a class="btn btn-primary" href="https://www.cashraise.online/campaign/bchtools-2027-let-s-prepare-for-january-d2a7a811" target="_blank" rel="noopener">Support on CashRaise ↗</a>
+            <a class="btn btn-ghost" href="https://alberdioni8406.substack.com/p/bchtools-2027-a-new-approach-to-funding" target="_blank" rel="noopener">Read full 2027 plan</a>
+          </div>
+        </div>
+        <div class="campaign-card">
+          <h3>Where the annual plan goes</h3>
+          <ul class="budget-list" id="budgetList"></ul>
+          <p class="cost-note mt-16">Figures are planning allocations. Actual spending is reported monthly. Full breakdown on Substack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <p class="eyebrow">WHY SUPPORT MATTERS</p>
       <h2>Tools do not stay online by magic</h2>
-      <p class="lede">Domains expire. Hosting costs money. APIs change. Bugs appear at inconvenient times. Development takes time — and occasionally a Red Bull.</p>
-      <p>Building for an ecosystem is continuous work. Fund Me Tools has no campaign end date because the work does not expire either.</p>
+      <p class="lede">Domains expire. Hosting costs money. APIs change. Bugs appear at inconvenient times. Development takes time.</p>
+      <p>Building for an ecosystem is continuous work. Monthly CashRaise campaigns fund operations and milestones. Read the plan on this site, contribute on CashRaise.</p>
       <div class="hero-actions mt-24">
-        <a href="fundmetools.html" class="btn btn-primary">Open Fund Me Tools</a>
+        <a href="https://www.cashraise.online/campaign/bchtools-2027-let-s-prepare-for-january-d2a7a811" class="btn btn-primary" target="_blank" rel="noopener">2027 campaign</a>
+        <a href="campaign.html" class="btn btn-ghost">2027 Campaign</a>
       </div>
     </div>
   </section>
@@ -177,7 +236,7 @@
     </div>
     <ul class="footer-links">
       <li><a href="tools.html">Tools</a></li>
-      <li><a href="fundmetools.html">Fund Me</a></li>
+      <li><a href="campaign.html">2027 Campaign</a></li>
       <li><a href="cashrush.html">CASHRUSH</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="https://github.com/alberdioni8406/bchhub" target="_blank" rel="noopener">Source</a></li>
@@ -191,9 +250,23 @@
 <script src="js/common.js"></script>
 <script>
 BCH.boot();
+const fin = getFinished().length;
+const lab = getLab().length;
+const aw = getAwaiting().length;
 document.getElementById("statTotal").textContent = PROJECTS.length;
-document.getElementById("statFinished").textContent = getFinished().length;
-document.getElementById("statLab").textContent = getLab().length;
+document.getElementById("statFinished").textContent = fin;
+document.getElementById("statLab").textContent = lab;
+["countFinished","cardFinished"].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = fin; });
+["countLab","cardLab"].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = lab; });
+["countAwaiting","cardAwaiting"].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = aw; });
+const ca = document.getElementById("countAll"); if (ca) ca.textContent = PROJECTS.length;
+(function renderBudget() {
+  const el = document.getElementById("budgetList");
+  if (!el || typeof CAMPAIGN_2027 === "undefined") return;
+  el.innerHTML = (CAMPAIGN_2027.budget || []).map(b =>
+    `<li><span>${b.item}</span><strong>$${b.amount.toLocaleString()}</strong></li>`
+  ).join("");
+})();
 
 (function renderFeatured() {
   const el = document.getElementById("featuredCard");
@@ -216,7 +289,7 @@ document.getElementById("statLab").textContent = getLab().length;
       <div class="featured-why">
         <h5>Why this matters</h5>
         <p>${p.whyBuilt || p.longDescription}</p>
-        <a href="fundmetools.html" class="btn btn-primary btn-sm" style="margin-top:12px;">Support the work →</a>
+        <a href="campaign.html" class="btn btn-primary btn-sm" style="margin-top:12px;">Support the work →</a>
       </div>
     </div>`;
   BCH.bindCards(el);
