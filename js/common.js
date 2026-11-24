@@ -116,7 +116,7 @@
       </div>
       <div class="modal-actions">
         ${liveBtn}${sourceBtn}${cashrushBtn}
-        <a class="btn btn-ghost" href="fundmetools.html">Fund Me Tools</a>
+        <a class="btn btn-ghost" href="campaign.html">2027 Campaign</a>
       </div>`;
 
     overlay.classList.add("open");
@@ -227,7 +227,7 @@
       btn.addEventListener("click", () => copy(tokenAddr, btn, null));
     });
 
-    // ID-based buttons used on Fund Me Tools page
+    // ID-based buttons used on 2027 Campaign page
     const copyBtn = document.getElementById("copyAddressBtn");
     const copyFeedback = document.getElementById("copyFeedback");
     if (copyBtn) copyBtn.addEventListener("click", () => copy(addr, copyBtn, copyFeedback));

@@ -24,6 +24,32 @@ const FUNDRAISER = {
 };
 
 /** Featured / highlighted — change slug to rotate */
+
+/** 2027 monthly sustainability — CashRaise + annual plan */
+const CAMPAIGN_2027 = {
+  title: "BCHTools 2027: Let's Prepare For January",
+  url: "https://www.cashraise.online/campaign/bchtools-2027-let-s-prepare-for-january-d2a7a811",
+  planUrl: "https://alberdioni8406.substack.com/p/bchtools-2027-a-new-approach-to-funding",
+  annualTargetUsd: 18000,
+  januaryTargetUsd: 1854,
+  note: "Monthly sustainability campaigns on CashRaise. Full annual plan on Substack.",
+  addressNote: "Campaign uses a dedicated CashRaise address — always verify on the campaign page.",
+  budget: [
+    { item: "Maintainer compensation", amount: 6000 },
+    { item: "Domains and registrations", amount: 500 },
+    { item: "Shared hosting", amount: 240 },
+    { item: "Database and storage", amount: 240 },
+    { item: "BCHNostr relay infrastructure", amount: 600 },
+    { item: "API usage and licensing", amount: 1800 },
+    { item: "Shared Data Gateway", amount: 1200 },
+    { item: "Nine unfinished projects", amount: 2200 },
+    { item: "BCH StableBridge development", amount: 2500 },
+    { item: "Backups, monitoring, security", amount: 360 },
+    { item: "Promotion and outreach", amount: 500 },
+    { item: "Contingency and allowances", amount: 1860 }
+  ]
+};
+
 const FEATURED_SLUG = "cauldron-radar";
 const HIGHLIGHTED_SLUGS = ["cauldron-radar", "bchbooks", "cashrush"];
 
@@ -227,20 +253,19 @@ const PROJECTS = [
     slug: "cashraise",
     status: "finished",
     category: "main",
-    tags: ["Fundraising", "Payments", "Community", "Non-custodial"],
-    description: "Non-custodial Bitcoin Cash fundraising board. List an idea, pay a small on-chain fee, and receive donations straight to your address — no accounts, no custody, no platform cut.",
-    longDescription: "CashRaise is a simple peer-to-peer fundraising board for Bitcoin Cash. Creators list ideas by paying a small on-chain listing fee to the platform address. Donations go directly to the creator's BCH address. The platform never holds funds. No accounts required. Built so people can surface ideas and get support without traditional intermediaries.",
-    whyBuilt: "Crypto funding should not look or act like a bank. People need a simple, open board to list ideas and receive BCH support peer-to-peer.",
+    tags: ["Fundraising", "Community", "Non-custodial"],
+    description: "Non-custodial Bitcoin Cash fundraising for ideas. Donations go straight to creators — no accounts, no custody, no platform cut on donations.",
+    longDescription: "CashRaise is an open board for BCH fundraising. Creators list ideas with their own BCH address; supporters send funds directly. Listing costs a small on-chain fee. The platform never holds donations. Used for BCHTools 2027 monthly sustainability campaigns and other ecosystem ideas.",
+    whyBuilt: "Crypto funding should not look or act like a bank. A simple, non-custodial board settled in BCH.",
     features: [
-      "List campaigns with on-chain listing fee verification",
-      "Donations go straight to the creator address",
-      "No accounts, no custody, no cut on donations",
-      "Public BCH explorer verification for listing payments",
-      "Open ideas board with live raised totals from on-chain sums"
+      "Creator-controlled campaign addresses",
+      "No custody of donations",
+      "On-chain listing fee",
+      "Open idea board for the BCH community"
     ],
-    dataSources: "Public BCH explorer (bchexplorer.cash) for fee verification",
+    dataSources: null,
     whatsNext: null,
-    liveUrl: "https://www.cashraise.online/",
+    liveUrl: "https://www.cashraise.online",
     githubUrl: "https://github.com/alberdioni8406/cashraise",
     needs: null,
     supportNeeded: null
@@ -437,6 +462,29 @@ const PROJECTS = [
     githubUrl: "https://github.com/alberdioni8406/CashCompass-Tokens",
     needs: null,
     supportNeeded: ["funding", "feedback"]
+  },
+  {
+    name: "BCH StableBridge",
+    slug: "bch-stablebridge",
+    status: "in-development",
+    category: "defi",
+    tags: ["DeFi", "Stablecoins", "Cross-chain", "Bridge"],
+    description: "Non-custodial route coordinator for BCH stablecoins (PUSD/MUSD) and EVM USDT. Prepares multi-leg flows — never holds funds or keys.",
+    longDescription: "BCH StableBridge helps explore and prepare cross-chain routes between MUSD/PUSD (CashTokens on Bitcoin Cash) and USDT on Ethereum and BNB Smart Chain. Non-custodial and provider-backed. Leg 1 (e.g. USDT→BCH via THORChain) can be prepared and executed from the app; leg 2 (BCH→PUSD) is manual in a CashTokens wallet until BCH-side signing is complete. Honest about partial verification — full E2E is not claimed until both legs work end-to-end.",
+    whyBuilt: "Moving value from EVM stablecoins into BCH and on-BCH stablecoins should be clearer without requiring users to invent the multi-step path alone.",
+    features: [
+      "Live THORChain quotes and deposit prepare",
+      "EVM wallet connect for USDT approve/deposit",
+      "Cauldron pool quotes via Riften indexer",
+      "Multi-leg tracker with recovery hints",
+      "Strict asset allowlist — no custody"
+    ],
+    dataSources: "THORChain, Riften Cauldron indexer, explorers",
+    whatsNext: "BCH-side Cauldron browser sign/broadcast; full E2E mainnet path; security testing. Dedicated development allocation in the 2027 plan.",
+    liveUrl: "https://bch-stablecoin-bridge.vercel.app/",
+    githubUrl: "https://github.com/alberdioni8406/BCH-stablecoin-bridge",
+    needs: "BCH-side execution, E2E testing, polish, community feedback",
+    supportNeeded: ["funding", "feedback"]
   }
 ];
 
@@ -465,11 +513,13 @@ function getFinished() {
   return PROJECTS.filter(p => p.status === "finished");
 }
 function getLab() {
-  return PROJECTS.filter(p =>
-    p.status === "beta" || p.status === "in-development" || p.status === "experimental" || p.status === "nearly-finished"
-  );
+  // Unfinished / in progress: everything not finished
+  return PROJECTS.filter(p => p.status !== "finished" && p.status !== "archived");
 }
 function getInProgress() {
+  return getLab();
+}
+function getUnfinished() {
   return getLab();
 }
 function getAwaiting() {
